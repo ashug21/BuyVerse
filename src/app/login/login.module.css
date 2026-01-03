@@ -1,0 +1,132 @@
+.loginPagei {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .loginContaineri {
+    width: 1120px;
+    background: #ffffff;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+  }
+  
+  .loginLefti {
+    flex: 1;
+    padding: 72px;
+  }
+  
+  .loginRighti {
+    flex: 1;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(2, 6, 23, 0.85),
+        rgba(2, 6, 23, 0.95)
+      ),
+      url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 72px;
+  }
+  
+  .loginTitlei {
+    font-size: 38px;
+    font-weight: 700;
+    color: #020617;
+  }
+  
+  .loginSubtexti {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #475569;
+  }
+  
+  .loginFormi {
+    margin-top: 44px;
+  }
+  
+  .inputGroupi {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  .labeli {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 8px;
+  }
+  
+  .inputi {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #cbd5f5;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .inputi:focus {
+    border-color: #2563eb;
+  }
+  
+  .loginButtoni {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #111827;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .loginButtoni:hover {
+    background: #020617;
+  }
+  
+  .signupTexti {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #475569;
+  }
+  
+  .signupLinki {
+    margin-left: 6px;
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .loginPromoi {
+    max-width: 420px;
+    padding: 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+  
+  .loginPromoi h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .loginPromoi p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e5e7eb;
+  }
+  

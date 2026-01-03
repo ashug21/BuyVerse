@@ -1,0 +1,154 @@
+.signupPageh {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .signupContainerh {
+    width: 1120px;
+    background: #ffffff;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+  }
+  
+  .signupLefth {
+    flex: 1;
+    padding: 72px;
+  }
+  
+  .signupRighth {
+    position: relative;
+    flex: 1;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(24, 31, 63, 0.92),
+        rgba(59, 65, 89, 0.88)
+      ),
+      url("https://images.unsplash.com/photo-1607082352121-fa243f3dde32");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px;
+  }
+  
+  .signupTitleh {
+    font-size: 38px;
+    font-weight: 700;
+    color: #020617;
+  }
+  
+  .signupSubtexth {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #475569;
+  }
+  
+  .signupFormh {
+    margin-top: 44px;
+  }
+  
+  .inputGrouph {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  .labelh {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 8px;
+  }
+  
+  .inputh {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #cbd5f5;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .inputh:focus {
+    border-color: #2563eb;
+  }
+  
+  .signupButtonh {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .signupButtonh:hover {
+    background: #1d4ed8;
+  }
+  
+  .loginTexth {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #475569;
+  }
+  
+  .loginLinkh {
+    margin-left: 6px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .promoBoxh {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+  
+  .promoTitleh {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  
+  .promoListh {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .promoListh li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #e5e7eb;
+  }
+  
+  .promoListh li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22c55e;
+  }
+  

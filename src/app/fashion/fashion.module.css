@@ -1,0 +1,123 @@
+.pageg {
+    background: #eaeff2;
+    min-height: 100vh;
+  }
+  
+  /* EXACTLY 4 CARDS PER ROW */
+  .gridWrapperg {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 36px 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .cardg {
+    background: #ffffff;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  
+  .cardg:hover {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+    transform: translateY(-3px);
+  }
+  
+  .imageWrapperg {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  
+  .imageg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .titleg {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0f1111;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+  
+  .ratingRowg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .starsg {
+    color: #f08804;
+    font-size: 14px;
+  }
+  
+  .reviewCountg {
+    font-size: 12px;
+    color: #007185;
+  }
+  
+  .priceRowg {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    margin-bottom: 14px;
+  }
+  
+  .currencyg {
+    font-size: 13px;
+    color: #0f1111;
+  }
+  
+  .priceg {
+    font-size: 19px;
+    font-weight: 600;
+    color: #0f1111;
+  }
+  
+  .ctag {
+    margin-top: auto;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .ctag:hover {
+    background: #f7ca00;
+    transform: translateY(-1px);
+  }
+  
+  /* RESPONSIVE FALLBACKS */
+  @media (max-width: 1200px) {
+    .gridWrapperg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .gridWrapperg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .gridWrapperg {
+      grid-template-columns: 1fr;
+    }
+  }
+  

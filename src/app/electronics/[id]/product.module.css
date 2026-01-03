@@ -1,0 +1,285 @@
+.page {
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #d5d9d9;
+  border-radius: 6px;
+  padding: 6px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activeThumb {
+  border: 2px solid #f08804;
+}
+
+.mainImage {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  border: 1px solid #e3e6e6;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navLeft,
+.navRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #d5d9d9;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.navLeft {
+  left: 10px;
+}
+
+.navRight {
+  right: 10px;
+}
+
+/* INFO */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f1111;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f59e0b;
+}
+
+.rating span {
+  color: #565959;
+  margin-left: 8px;
+}
+
+.divider {
+  height: 1px;
+  background: #e7e7e7;
+  margin: 12px 0;
+}
+
+/* PRICE */
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.beforePrice {
+  font-size: 16px;
+  color: #565959;
+  text-decoration: line-through;
+}
+
+.currency {
+  font-size: 18px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #b12704;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* ACTION BUTTONS */
+.actionRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cta {
+  padding: 14px 32px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #f7ca00;
+}
+
+.buyNow {
+  padding: 14px 32px;
+  background: #ff9900;
+  border: 1px solid #e47911;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #111;
+}
+
+.buyNow:hover {
+  background: #e88b00;
+}
+
+/* NOT FOUND */
+.notFound {
+  padding: 140px 24px;
+  text-align: center;
+  font-size: 26px;
+}
+/* 
+.cartAnim {
+  position: relative;
+  overflow: hidden;
+  animation: cartPress 0.6s ease forwards;
+}
+
+.cartAnim::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: flyDot 0.6s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes cartPress {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.94);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flyDot {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(120px, -120px) scale(0.2);
+  }
+} */
+
+/* Add-to-cart success + checkmark */
+.adding {
+  pointer-events: none;
+  animation: pressIn 0.3s ease;
+}
+
+.added {
+  background: #ffd814;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  animation: successPop 0.5s ease forwards;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  animation: drawCheck 0.4s ease forwards;
+}
+
+@keyframes pressIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+

@@ -1,0 +1,111 @@
+.pagek {
+  min-height: calc(100vh - 64px);
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentk {
+  flex: 1;
+  padding: 32px 20px 0;
+}
+
+.cardk {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+}
+
+.imgk {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.infok {
+  flex: 1;
+}
+
+.titlek {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.pricek {
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.qtyk {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnk {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.countk {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bink {
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.bink:hover {
+  opacity: 1;
+}
+
+/* checkout button section */
+.payWrapk {
+  margin-bottom: 70px;
+  padding: 8px 0 20px;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  height: 20px;
+}
+
+/* LINK STYLED EXACTLY LIKE BUTTON */
+.payBtnk {
+  width: 90%;
+  max-width: 700px;
+  height: 52px;
+  background: #facc15;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.payBtnk:hover {
+  background: #dda619;
+}

@@ -1,0 +1,137 @@
+.pagem {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 16px;
+  }
+  
+  .headingm {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  
+  .infom {
+    text-align: center;
+    color: #555;
+  }
+  
+  .ordersWrapm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .orderm {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .orderHeaderm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 16px;
+    padding: 16px;
+    background: #f3f3f3;
+    font-size: 14px;
+    align-items: center;
+  }
+  
+  .labelm {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .orderIdm {
+    font-size: 12px;
+    color: #333;
+    word-break: break-all;
+  }
+  
+  .statusm {
+    background: #e6f4ea;
+    color: #067d62;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .orderBodym {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .productImgm {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 6px;
+  }
+  
+  .detailsm {
+    flex: 1;
+  }
+  
+  .titlem {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .breakdownm {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  .totalm {
+    font-weight: 600;
+  }
+  
+  .viewBtnm {
+    margin-top: 14px;
+    padding: 10px 16px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+
+  .addressBoxm {
+    margin-top: 16px;
+    padding: 14px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .addressTitlem {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .addressNamem {
+    font-weight: 500;
+  }
+  
+  .addressPhonem {
+    margin-top: 4px;
+    color: #444;
+  }
+
+  .paymentModem {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  
