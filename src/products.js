@@ -373,7 +373,7 @@ export const products = [
   {
     id: "24",
     name: "Nike Air Force 1 Flyknit 2.0 Running Shoes For Men",
-    beforePrice: 10495,
+    beforePrice: 13999,
     price: 8995,
     ratings: 25419,
     starRating: 4,

@@ -197,7 +197,7 @@ const Navbar = () => {
                 {filteredProducts.map((item) => (
                   <Link
                     key={item.id}
-                    href={`/product/${item.id}`}
+                    href={`/${item.category.toLowerCase()}/${item.id}`}
                     className={styles.searchCarda}
                     onClick={() => {
                       setSearch("");

@@ -2,6 +2,7 @@ import Banner from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import MultiDeals from "@/components/MoreTopDeals/MoreTopDeals";
 import Navbar from "@/components/Navbar/Navbar";
+import PopularSection from "@/components/Popular/Popular";
 import TopDeals from "@/components/TopDeals/TopDeals";
 import React from "react";
 
@@ -16,6 +17,8 @@ const Home = () => {
       <TopDeals />
       <br />
       <MultiDeals />
+      <br/> <br/> <br/>
+      <PopularSection/>
       <br/><br/><br/><br/>
       <br/><br/><br/><br/>
       <Footer/>

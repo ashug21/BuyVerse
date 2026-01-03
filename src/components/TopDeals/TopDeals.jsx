@@ -7,7 +7,7 @@ const TopDeals = () => {
   return (
     <section className={styles.dealsSectionc}>
       <div className={styles.headerc}>
-        <h2 className={styles.titlec}>Top Deals</h2>
+        <h2 className={styles.titlec}>Top Deals🔥</h2>
         <button className={styles.viewAllc}>View All</button>
       </div>
 

@@ -1,0 +1,110 @@
+.popularSectionp {
+    background: #e3e6e6;
+    padding: 24px 0;
+  }
+  
+  .containerp {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .cardp {
+    background: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .headingp {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .imageWrap {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imageWrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .titlep {
+    font-size: 14px;
+    margin: 12px 0 8px;
+    line-height: 1.4;
+  }
+  
+  .priceRowp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .pricep {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .mrpp {
+    font-size: 13px;
+    color: #565959;
+    text-decoration: line-through;
+  }
+  
+  .thumbsp {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .thumbsp img {
+    width: 54px;
+    height: 54px;
+    border: 1px solid #d5d9d9;
+    padding: 4px;
+    object-fit: contain;
+  }
+  
+  .badgep {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  
+  .badgep span:first-child {
+    background: #cc0c39;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 6px;
+  }
+  
+  .badgep span:last-child {
+    color: #cc0c39;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .linkp {
+    margin-top: auto;
+    color: #007185;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .linkp:hover {
+    text-decoration: underline;
+  }
+  
