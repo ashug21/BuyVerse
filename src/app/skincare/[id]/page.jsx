@@ -1,15 +1,14 @@
 "use client";
-
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { products } from "@/products";
 import styles from "../../electronics/[id]/product.module.css";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 
-const FashionProductPage = ({ params }) => {
+const ProductPage = ({ params }) => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
@@ -18,7 +17,7 @@ const FashionProductPage = ({ params }) => {
   const product = products.find((item) => String(item.id) === id);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cartState, setCartState] = useState("idle"); // idle | adding | added
+  const [cartState, setCartState] = useState("idle");
 
   if (!product) {
     return (
@@ -97,7 +96,6 @@ const FashionProductPage = ({ params }) => {
     existingCart.push(cartItem);
     localStorage.setItem("cart", JSON.stringify(existingCart));
 
-
     router.push("/cart");
   };
 
@@ -140,7 +138,9 @@ const FashionProductPage = ({ params }) => {
             <button className={styles.navLeft} onClick={prevImage}>
               ‹
             </button>
+
             <img src={images[currentIndex]} className={styles.productImg} />
+
             <button className={styles.navRight} onClick={nextImage}>
               ›
             </button>
@@ -160,14 +160,13 @@ const FashionProductPage = ({ params }) => {
           <div className={styles.divider} />
 
           <div className={styles.priceBlock}>
+            <span className={styles.beforePrice}>₹{product.beforePrice}</span>
             <div className={styles.priceRow}>
-              <span className={styles.beforePrice}>₹{product.beforePrice}</span>
               <span className={styles.currency}>₹</span>
               <span className={styles.price}>{product.price}</span>
             </div>
-
             <span className={styles.discount}>
-              Save ₹{product.beforePrice - product.price}
+              (Save ₹{product.beforePrice - product.price})
             </span>
           </div>
 
@@ -180,7 +179,13 @@ const FashionProductPage = ({ params }) => {
                 cartState === "adding" ? styles.adding : ""
               } ${cartState === "added" ? styles.added : ""}`}
             >
-              {cartState === "added" ? <CheckSVG /> : "Add to Cart"}
+              {cartState === "added" ? (
+                <div>
+                  <CheckSVG />
+                </div>
+              ) : (
+                "Add to Cart"
+              )}
             </button>
 
             <button onClick={handleBuy} className={styles.buyNow}>
@@ -190,12 +195,10 @@ const FashionProductPage = ({ params }) => {
         </div>
       </div>
 
-      <br /><br /><br />
-      <br /><br /><br />
-
+      <br /><br /><br /><br /><br /><br />
       <Footer />
     </>
   );
 };
 
-export default FashionProductPage;
+export default ProductPage;

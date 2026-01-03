@@ -6,11 +6,10 @@ import Navbar from "@/components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-
+import toast from "react-hot-toast";
 
 const Login = () => {
   const router = useRouter();
-
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,15 +17,26 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!email || !password) {
+      toast.error("Both Fields are required");
+      return;
+    }
+
+    const loadingToast = toast.loading("Logging in...");
+
     const result = await signIn("credentials", {
       email,
       password,
       redirect: false,
     });
 
+    toast.dismiss(loadingToast);
+
     if (result?.error) {
+      toast.error("Invalid email or password");
       console.log(result.error);
     } else {
+      toast.success("Login successful");
       router.push("/");
     }
   };
@@ -47,8 +57,8 @@ const Login = () => {
               <div className={styles.inputGroupi}>
                 <label className={styles.labeli}>Email Address</label>
                 <input
-                 onChange={(e) => setEmail(e.target.value)}
-                 value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   type="email"
                   placeholder="john@example.com"
                   className={styles.inputi}

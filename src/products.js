@@ -481,6 +481,232 @@ export const products = [
     ],
     category: "Fashion",
     description:
-      "Daniel Wellington women’s classic watch embodies elegance and minimalism. Featuring a clean dial and refined strap, it is perfect for formal and casual occasions, offering timeless style, premium craftsmanship, and a sophisticated finishing touch."
-  }
+      "Daniel Wellington women's classic watch embodies elegance and minimalism. Featuring a clean dial and refined strap, it is perfect for formal and casual occasions, offering timeless style, premium craftsmanship, and a sophisticated finishing touch."
+  },
+
+  {
+    id: "31",
+    name: "Cetaphil Gentle Skin Cleanser (500ml)",
+    beforePrice: 1299,
+    price: 1169,
+    ratings: 34211,
+    starRating: 5,
+    images: ["/skincare/Cetaphil/GentleSkinCleanser/1.png",
+      "/skincare/Cetaphil/GentleSkinCleanser/2.png",
+      "/skincare/Cetaphil/GentleSkinCleanser/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Cetaphil Gentle Skin Cleanser is a dermatologist-recommended formula that cleanses without stripping moisture. Ideal for sensitive and dry skin, it maintains the skin barrier while providing gentle yet effective cleansing."
+  },
+  {
+    id: "32",
+    name: "Minimalist Salicylic Acid Cleanser (2%)",
+    beforePrice: 349,
+    price: 299,
+    ratings: 21876,
+    starRating: 4,
+    images: ["/skincare/Minimalist/SalicylicAcid/1.png",
+      "/skincare/Minimalist/SalicylicAcid/2.png",
+      "/skincare/Minimalist/SalicylicAcid/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Minimalist Salicylic Acid Cleanser helps unclog pores and reduce acne by gently exfoliating the skin. Suitable for oily and acne-prone skin, it controls excess oil and prevents breakouts."
+  },
+  {
+    id: "33",
+    name: "The Derma Co 10% Niacinamide Serum",
+    beforePrice: 699,
+    price: 599,
+    ratings: 19654,
+    starRating: 4,
+    images: ["/skincare/TheDermaCo/Niacinamide/1.png",
+      "/skincare/TheDermaCo/Niacinamide/2.png",
+      "/skincare/TheDermaCo/Niacinamide/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "The Derma Co 10% Niacinamide Serum reduces acne marks, minimizes pores, and improves skin texture. Lightweight and fast-absorbing, it strengthens the skin barrier and balances oil production."
+  },
+  {
+    id: "34",
+    name: "Plum Green Tea Oil-Free Moisturizer",
+    beforePrice: 575,
+    price: 499,
+    ratings: 15432,
+    starRating: 4,
+    images: ["/skincare/PlumGreen/TeaOil/1.png",
+      "/skincare/PlumGreen/TeaOil/2.png",
+      "/skincare/PlumGreen/TeaOil/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Plum Green Tea Oil-Free Moisturizer hydrates the skin without making it greasy. Enriched with green tea extracts, it controls acne, soothes irritation, and keeps skin fresh all day."
+  },
+  {
+    id: "35",
+    name: "Neutrogena Hydro Boost Water Gel",
+    beforePrice: 950,
+    price: 825,
+    ratings: 28765,
+    starRating: 5,
+    images: ["/skincare/Neutrogena/HydroBoostWater/1.png",
+    "/skincare/Neutrogena/HydroBoostWater/2.png",
+    "/skincare/Neutrogena/HydroBoostWater/3.png"
+  ],
+    category: "Skincare",
+    description:
+      "Neutrogena Hydro Boost Water Gel provides intense hydration with hyaluronic acid. Its lightweight gel texture absorbs quickly, leaving skin smooth, plump, and refreshed."
+  },
+  {
+    id: "36",
+    name: "Dot & Key Cica Calming Night Gel",
+    beforePrice: 695,
+    price: 599,
+    ratings: 13221,
+    starRating: 4,
+    images: ["/skincare/DotandKey/CicaCalming/1.png",
+      "/skincare/DotandKey/CicaCalming/2.png",
+      "/skincare/DotandKey/CicaCalming/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Dot & Key Cica Calming Night Gel repairs and soothes stressed skin overnight. Infused with cica and ceramides, it reduces redness and strengthens the skin barrier."
+  },
+  {
+    id: "37",
+    name: "La Roche-Posay Anthelios SPF 50+ Sunscreen",
+    beforePrice: 1650,
+    price: 1499,
+    ratings: 9876,
+    starRating: 5,
+    images: ["/skincare/LaRoche-Posay/Anthelios/1.png",
+      "/skincare/LaRoche-Posay/Anthelios/2.png",
+      "/skincare/LaRoche-Posay/Anthelios/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "La Roche-Posay Anthelios SPF 50+ provides broad-spectrum sun protection with a lightweight, non-greasy formula. Ideal for sensitive skin, it protects against UVA and UVB damage."
+  },
+  {
+    id: "38",
+    name: "Aqualogica Hydrate+ Sunscreen SPF 50",
+    beforePrice: 499,
+    price: 399,
+    ratings: 24310,
+    starRating: 4,
+    images: ["/skincare/Aqualogica/hydrate/1.png",
+      "/skincare/Aqualogica/hydrate/2.png",
+      "/skincare/Aqualogica/hydrate/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Aqualogica Hydrate+ Sunscreen offers high sun protection with deep hydration. Enriched with hyaluronic acid, it is lightweight, non-sticky, and perfect for daily use."
+  },
+  {
+    id: "39",
+    name: "Lakmé Blush & Glow Strawberry Freshness Gel ",
+    beforePrice: 412,
+    price: 372,
+    ratings: 32145,
+    starRating: 3,
+    images: ["/skincare/LakmeBlush/GlowStrawberry/1.png",
+      "/skincare/LakmeBlush/GlowStrawberry/2.png",
+      "/skincare/LakmeBlush/GlowStrawberry/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Mamaearth Vitamin C Face Wash gently cleanses while brightening the skin. Infused with vitamin C and turmeric, it helps reduce dullness and promotes an even skin tone."
+  },
+  {
+    id: "40",
+    name: "The Ordinary Glycolic Acid 7% Toning Solution",
+    beforePrice: 1250,
+    price: 1099,
+    ratings: 18432,
+    starRating: 5,
+    images: ["/skincare/TheOrdinary/GlycolicAcid/1.png",
+      "/skincare/TheOrdinary/GlycolicAcid/2.png",
+      "/skincare/TheOrdinary/GlycolicAcid/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "The Ordinary Glycolic Acid 7% Toning Solution exfoliates dead skin cells to reveal brighter, smoother skin. It improves texture and clarity when used consistently."
+  },
+  {
+    id: "41",
+    name: "Simple Hydrating Light Moisturizer",
+    beforePrice: 465,
+    price: 399,
+    ratings: 22109,
+    starRating: 4,
+    images: ["/skincare/Simple/hydratingLight/1.png",
+      "/skincare/Simple/hydratingLight/2.png",
+      "/skincare/Simple/hydratingLight/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Simple Hydrating Light Moisturizer provides gentle hydration without harsh chemicals. Ideal for sensitive skin, it keeps skin soft, smooth, and balanced."
+  },
+  {
+    id: "42",
+    name: "COSRX Advanced Snail 96 Mucin Essence",
+    beforePrice: 1450,
+    price: 1299,
+    ratings: 11876,
+    starRating: 5,
+    images: ["/skincare/COSRX/advancedsnail/1.png",
+      "/skincare/COSRX/advancedsnail/2.png",
+      "/skincare/COSRX/advancedsnail/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "COSRX Snail Mucin Essence deeply hydrates and repairs damaged skin. Its unique formula improves elasticity, soothes irritation, and promotes healthy skin regeneration."
+  },
+  {
+    id: "43",
+    name: "WOW Skin Science Aloe Vera Gel",
+    beforePrice: 399,
+    price: 299,
+    ratings: 26754,
+    starRating: 4,
+    images: ["/skincare/WowSkin/ScienceAloeVera/1.png",
+      "/skincare/WowSkin/ScienceAloeVera/2.png",
+      "/skincare/WowSkin/ScienceAloeVera/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "WOW Skin Science Aloe Vera Gel soothes and hydrates the skin naturally. Suitable for face, body, and hair, it helps calm irritation and restore moisture."
+  },
+  {
+    id: "44",
+    name: "Biotique Bio Morning Nectar Moisturizer",
+    beforePrice: 299,
+    price: 249,
+    ratings: 17654,
+    starRating: 3,
+    images: ["/skincare/Biotique/bioMorning/1.png",
+      "/skincare/Biotique/bioMorning/2.png",
+      "/skincare/Biotique/bioMorning/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Biotique Bio Morning Nectar nourishes and hydrates the skin with botanical extracts. It enhances skin radiance and provides long-lasting moisture."
+  },
+  {
+    id: "45",
+    name: "BEARDO De-Tan| Vitamin E, Aloe Vera & Coffee",
+    beforePrice: 299,
+    price: 210,
+    ratings: 6543,
+    starRating: 5,
+    images: ["/skincare/Beardo/De-Tan/1.png",
+      "/skincare/Beardo/De-Tan/2.png",
+      "/skincare/Beardo/De-Tan/3.png"
+    ],
+    category: "Skincare",
+    description:
+      "Forest Essentials Kashmiri Saffron Facial Cleanser gently purifies and brightens the skin. Crafted with natural ingredients, it leaves skin refreshed, soft, and radiant."
+  },
 ];

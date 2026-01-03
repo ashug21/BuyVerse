@@ -6,6 +6,7 @@ import { products } from "@/products";
 import styles from "./product.module.css";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 const ProductPage = ({ params }) => {
   const { data: session, status } = useSession();
@@ -16,7 +17,7 @@ const ProductPage = ({ params }) => {
   const product = products.find((item) => String(item.id) === id);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cartState, setCartState] = useState("idle"); // idle | adding | added
+  const [cartState, setCartState] = useState("idle");
 
   if (!product) {
     return (
@@ -47,6 +48,7 @@ const ProductPage = ({ params }) => {
     if (status === "loading") return;
 
     if (!session) {
+      toast.error("Please login to add items to cart");
       router.push("/login");
       return;
     }
@@ -67,6 +69,8 @@ const ProductPage = ({ params }) => {
     existingCart.push(cartItem);
     localStorage.setItem("cart", JSON.stringify(existingCart));
 
+    toast.success("Added to cart");
+
     setTimeout(() => setCartState("added"), 350);
     setTimeout(() => setCartState("idle"), 2000);
   };
@@ -75,6 +79,7 @@ const ProductPage = ({ params }) => {
     if (status === "loading") return;
 
     if (!session) {
+      toast.error("Please login to continue");
       router.push("/login");
       return;
     }
@@ -174,9 +179,13 @@ const ProductPage = ({ params }) => {
                 cartState === "adding" ? styles.adding : ""
               } ${cartState === "added" ? styles.added : ""}`}
             >
-              {cartState === "added" ? <div>
-                <CheckSVG />
-              </div>  : "Add to Cart"}
+              {cartState === "added" ? (
+                <div>
+                  <CheckSVG />
+                </div>
+              ) : (
+                "Add to Cart"
+              )}
             </button>
 
             <button onClick={handleBuy} className={styles.buyNow}>
