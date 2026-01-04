@@ -313,7 +313,7 @@ export const products = [
     ratings: 19876,
     starRating: 2,
     images: [
-      "/Banner/men1.png",
+      "/banner/men1.png",
       "/fashion/Levi's/511Men'sSlimFitJeans/2.png",
       "/fashion/Levi's/511Men'sSlimFitJeans/3.png"
     ],
@@ -330,7 +330,7 @@ export const products = [
     ratings: 11234,
     starRating: 3,
     images: [
-      "/Banner/women3.png",
+      "/banner/women3.png",
       "/fashion/Only/Women'sHighRise/2.png",
       "/fashion/Only/Women'sHighRise/3.png"
     ],
@@ -346,7 +346,7 @@ export const products = [
     ratings: 16782,
     starRating: 4,
     images: [
-      "/Banner/men2.png",
+      "/banner/men2.png",
       "/fashion/Adidas/MenFullSleeve/2.png",
       "/fashion/Adidas/MenFullSleeve/3.png"
     ],
