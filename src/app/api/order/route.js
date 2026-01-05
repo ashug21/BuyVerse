@@ -2,9 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "../../../../lib/db";
 import Order from "../../../../models/Order";
 
+// below is to make it with email -> details 
+import { getServerSession } from "next-auth";
+import { authOptions } from "../auth/[...nextauth]/route";
+
 export async function POST(request) {
   try {
     await connectDB();
+
+    const session = await getServerSession(authOptions);
+
+    if (!session || !session.user?.email) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized" },
+        { status: 401 }
+      );
+    }
 
     const { title, itemsTotal, delivery, total, paymentMethod, paymentStatus } =
       await request.json();
@@ -23,6 +36,7 @@ export async function POST(request) {
       total,
       paymentMethod,
       paymentStatus: paymentStatus || "Pending",
+      userEmail: session.user.email,
     });
 
     return NextResponse.json(
@@ -41,7 +55,19 @@ export async function GET() {
   try {
     await connectDB();
 
-    const order = await Order.find({}).lean();
+    const session = await getServerSession(authOptions);
+
+
+    if (!session || !session.user?.email) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
+
+    const order = await Order.find({userEmail: session.user.email}).lean();
+    
 
     if (order.length === 0) {
       return NextResponse.json(

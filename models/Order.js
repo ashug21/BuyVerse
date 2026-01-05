@@ -26,12 +26,14 @@ const OrderSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
-
     paymentStatus: {
       type: String,
       default: "Pending",
     },
+    userEmail : {
+      type : String,
+      required: true
+    }
   },
   { timestamps: true }
 );
