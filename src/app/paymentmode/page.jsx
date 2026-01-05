@@ -49,7 +49,8 @@ const PaymentsPage = () => {
 
   const placeOrder = async () => {
     try {
-      // 👉 RAZORPAY ONLY FOR UPI
+
+
       if (paymentMethod === "Upi") {
         const res = await fetch("/api/payment/create-order", {
           method: "POST",
@@ -72,7 +73,8 @@ const PaymentsPage = () => {
           name: "BuyVerse",
           description: "Order Payment",
           handler: async function () {
-            // ✅ ONLY ADDITION BELOW
+
+
             const orderRes = await fetch("/api/order", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -82,7 +84,7 @@ const PaymentsPage = () => {
                 delivery,
                 total: finalTotal,
                 paymentMethod: "UPI",
-                paymentStatus: "Paid", // ✅ ADDED
+                paymentStatus: "Paid", 
               }),
             });
 
@@ -108,7 +110,8 @@ const PaymentsPage = () => {
         return;
       }
 
-      // 👉 NON-UPI (UNCHANGED FLOW)
+
+
       const res = await fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -118,7 +121,7 @@ const PaymentsPage = () => {
           delivery,
           total: finalTotal,
           paymentMethod,
-          paymentStatus: "Pending", // ✅ ADDED
+          paymentStatus: "Pending", 
         }),
       });
 
@@ -129,7 +132,7 @@ const PaymentsPage = () => {
       }
 
       localStorage.removeItem("cart");
-      router.push("/orders");
+      router.replace("/orders");
     } catch (error) {
       console.log(error);
     }
@@ -190,10 +193,10 @@ const PaymentsPage = () => {
                     onChange={() => setPaymentMethod("Upi")}
                   />
                   <Image src="/upi.png" alt="UPI" width={60} height={24} />
-                  <span>UPI / Paytm / PhonePe</span>
+                  <span>UPI / Paytm / PhonePe / Google Pay / Amazon Pay</span>
                 </div>
 
-                <div className={styles.paymentOption}>
+                {/* <div className={styles.paymentOption}>
                   <input
                     type="radio"
                     name="payment"
@@ -201,15 +204,15 @@ const PaymentsPage = () => {
                   />
                   <Image src="/credit.png" alt="Card" width={60} height={24} />
                   <span>Credit / Debit Card</span>
-                </div>
-
+                </div> */}
+{/* 
                 <div className={styles.cardForm}>
                   <input placeholder="Card Number" />
                   <div className={styles.cardRow}>
                     <input placeholder="MM/YY" />
                     <input placeholder="CVV" />
                   </div>
-                </div>
+                </div> */}
 
                 <div className={styles.paymentOption}>
                   <input

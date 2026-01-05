@@ -61,7 +61,8 @@ const Orders = () => {
     return matchedProduct?.images?.[0] || "/placeholder/product.png";
   };
 
-  // ✅ EARLY RETURN ONLY AFTER ALL HOOKS
+
+
   if (status === "loading") return null;
 
   return (
@@ -104,8 +105,8 @@ const Orders = () => {
                 </div>
 
                 <div className={styles.statusm}>
-  {order.paymentStatus || "Pending"}
-</div>
+                 {order.paymentStatus || "Pending"}
+                </div>
 
               </div>
 

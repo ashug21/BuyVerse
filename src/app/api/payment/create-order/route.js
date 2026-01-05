@@ -11,9 +11,9 @@ export async function POST(request) {
     const { amount } = await request.json();
     if (!amount) throw new Error("Amount required");
 
-    // Create order
+
     const options = {
-      amount: amount * 100, // convert to paise
+      amount: amount * 100, 
       currency: "INR",
       receipt: `receipt_${Date.now()}`,
     };

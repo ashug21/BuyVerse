@@ -6,28 +6,15 @@ export async function POST(request) {
   try {
     await connectDB();
 
+    const { title, itemsTotal, delivery, total, paymentMethod, paymentStatus } =
+      await request.json();
 
-    const {
-      title,
-      itemsTotal,
-      delivery,
-      total,
-      paymentMethod,
-      paymentStatus, 
-    } = await request.json();
-
-    if (
-      !title ||
-      itemsTotal == null ||
-      delivery == null ||
-      total == null
-    ) {
+    if (!title || itemsTotal == null || delivery == null || total == null) {
       return NextResponse.json(
         { success: false, message: "All Fields are required" },
         { status: 400 }
       );
     }
-
 
     await Order.create({
       title,
@@ -35,7 +22,7 @@ export async function POST(request) {
       delivery,
       total,
       paymentMethod,
-      paymentStatus: paymentStatus || "Pending", 
+      paymentStatus: paymentStatus || "Pending",
     });
 
     return NextResponse.json(
@@ -63,10 +50,7 @@ export async function GET() {
       );
     }
 
-    return NextResponse.json(
-      { success: true, order },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true, order }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { success: false, message: "Some Error Occurred " + error },
