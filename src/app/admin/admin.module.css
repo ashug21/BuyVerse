@@ -1,0 +1,63 @@
+.adminContainern {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
+  }
+  
+  .loginBoxn {
+    width: 440px;
+    padding: 44px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .titlen {
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .inputn {
+    width: 100%;
+    padding: 16px 18px;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .inputn::placeholder {
+    color: #777;
+  }
+  
+  .inputn:focus {
+    border-color: #555;
+  }
+  
+  .buttonn {
+    margin-top: 10px;
+    padding: 16px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .buttonn:hover {
+    background: #e5e5e5;
+  }
+  

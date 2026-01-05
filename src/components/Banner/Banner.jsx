@@ -68,6 +68,20 @@ const Banner = () => {
           </div>
         </div>
 
+
+
+        {/* <div className={styles.slideb}>
+          <img src="/banner/shoes1.png" alt="nike shoes" />
+          <div className={styles.contentb}>
+            <h2 className={styles.titleb}>Nike Air Force 1 Flyknit 2.0 Running Shoes</h2>
+            <p className={styles.descb}>Premium Running Shoes</p>
+            <div className={styles.actionsb}>
+              <Link href="/fashion/24" className={styles.primaryBtnb}>Buy Now</Link>
+              <Link href="/fashion/24" className={styles.secondaryBtnb}>View Details</Link>
+            </div>
+          </div>
+        </div> */}
+
       </div>
 
       <div className={styles.overlayb} />

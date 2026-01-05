@@ -5,11 +5,15 @@ import styles from "./address.module.css";
 import bin from '../../../public/bin.png'
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 const AddressPage = () => {
 
   const router = useRouter();
+
+  const { data: session, status } = useSession();
+
 
   const [fullname, setFullName] = useState("");
   const [mobile, setMobile] = useState("");
@@ -63,6 +67,14 @@ const AddressPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (status === "loading") return;
+
+    if (!session) {
+      toast.error("Please login to add address");
+      router.push("/login");
+      return;
+    }  
 
     const res = await fetch("/api/address", {
       method: "POST",
