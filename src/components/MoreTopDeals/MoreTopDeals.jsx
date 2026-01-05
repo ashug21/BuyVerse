@@ -60,7 +60,7 @@ const MultiDeals = () => {
               <span className={styles.offerd}>Top Picks</span>
             </Link>
             <Link href={"/fashion/22"} className={styles.cardd}>
-              <img src="/Banner/men2.png" alt="menhoodie" />
+              <img src="/banner/men2.png" alt="menhoodie" />
               <p className={styles.named}>Men's Caps</p>
               <span className={styles.offerd}>Top Picks</span>
             </Link>

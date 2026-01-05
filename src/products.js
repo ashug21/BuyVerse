@@ -3,7 +3,7 @@ export const products = [
     id: "1",
     name: "Apple iPhone 15 Pro (128GB)",
     beforePrice: 145900,
-    price: 134900,
+    price: 1, //134900
     ratings: 18432,
     starRating: 4,
     images: [

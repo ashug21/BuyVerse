@@ -14,7 +14,6 @@ const PaymentsPage = () => {
   const [cart, setCart] = useState([]);
   const [paymentMethod, setPaymentMethod] = useState(null);
 
-
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(storedCart);
@@ -41,7 +40,7 @@ const PaymentsPage = () => {
   );
 
   const tax = Math.round(itemsTotal * 0.01);
-  const delivery = itemsTotal >= 10000 ? 0 : 120;
+  const delivery = itemsTotal <= 10000 ? 0 : 120;
   const finalTotal = itemsTotal + tax + delivery;
 
   const title = cart
@@ -50,6 +49,66 @@ const PaymentsPage = () => {
 
   const placeOrder = async () => {
     try {
+      // 👉 RAZORPAY ONLY FOR UPI
+      if (paymentMethod === "Upi") {
+        const res = await fetch("/api/payment/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: finalTotal }),
+        });
+
+        const { order } = await res.json();
+
+        if (!order) {
+          alert("Failed to create payment order");
+          return;
+        }
+
+        const options = {
+          key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+          order_id: order.id,
+          amount: order.amount,
+          currency: order.currency,
+          name: "BuyVerse",
+          description: "Order Payment",
+          handler: async function () {
+            // ✅ ONLY ADDITION BELOW
+            const orderRes = await fetch("/api/order", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                title,
+                itemsTotal,
+                delivery,
+                total: finalTotal,
+                paymentMethod: "UPI",
+                paymentStatus: "Paid", // ✅ ADDED
+              }),
+            });
+
+            if (!orderRes.ok) {
+              alert("Order placement failed");
+              return;
+            }
+
+            localStorage.removeItem("cart");
+            router.push("/orders");
+          },
+          prefill: {
+            name: selectedAddress?.fullname || "",
+            contact: selectedAddress?.mobile || "",
+          },
+          theme: {
+            color: "#121212",
+          },
+        };
+
+        const razorpay = new window.Razorpay(options);
+        razorpay.open();
+        return;
+      }
+
+      // 👉 NON-UPI (UNCHANGED FLOW)
       const res = await fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -58,7 +117,8 @@ const PaymentsPage = () => {
           itemsTotal,
           delivery,
           total: finalTotal,
-          paymentMethod
+          paymentMethod,
+          paymentStatus: "Pending", // ✅ ADDED
         }),
       });
 

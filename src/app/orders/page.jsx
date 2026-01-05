@@ -103,7 +103,10 @@ const Orders = () => {
                   <p className={styles.orderIdm}>{order._id}</p>
                 </div>
 
-                <div className={styles.statusm}>Pending</div>
+                <div className={styles.statusm}>
+  {order.paymentStatus || "Pending"}
+</div>
+
               </div>
 
               <div className={styles.orderBodym}>
