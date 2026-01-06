@@ -1,21 +1,63 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar/Navbar";
 import { products } from "@/products";
-import styles from './skincare.module.css'
+import styles from "./skincare.module.css";
 import Footer from "@/components/Footer/Footer";
 
 const Skincare = () => {
-  const electronicsProducts = products.filter(
+  const initialProducts = products.filter(
     (product) => product.category === "Skincare"
   );
+
+  const [skincareProducts, setSkincareProducts] = useState(initialProducts);
+  const [sort, setSort] = useState("Default");
+
+  const handleSort = (value) => {
+    setSort(value);
+
+    if (value === "Price : Low to High") {
+      const sorted = [...skincareProducts].sort(
+        (a, b) => a.price - b.price
+      );
+      setSkincareProducts(sorted);
+    }
+
+    if (value === "Price : High to Low") {
+      const sorted = [...skincareProducts].sort(
+        (a, b) => b.price - a.price
+      );
+      setSkincareProducts(sorted);
+    }
+
+    if (value === "Default") {
+      setSkincareProducts(initialProducts);
+    }
+  };
 
   return (
     <div className={styles.pagen}>
       <Navbar />
 
+      {/* SORT BAR */}
+      <div className={styles.sortBarn}>
+        <span className={styles.sortLabeln}>Sort by</span>
+
+        <select
+          value={sort}
+          onChange={(e) => handleSort(e.target.value)}
+          className={styles.sortSelectn}
+        >
+          <option>Default</option>
+          <option>Price : Low to High</option>
+          <option>Price : High to Low</option>
+        </select>
+      </div>
+
       <div className={styles.gridWrappern}>
-        {electronicsProducts.map((item) => (
+        {skincareProducts.map((item) => (
           <Link
             key={item.id}
             href={`/skincare/${item.id}`}

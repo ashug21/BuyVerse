@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import { products } from "@/products";
 import styles from "./fashion.module.css";
@@ -6,13 +8,53 @@ import Footer from "@/components/Footer/Footer";
 import Link from "next/link";
 
 const Fashion = () => {
-  const fashionProducts = products.filter(
+  const initialProducts = products.filter(
     (product) => product.category === "Fashion"
   );
+
+  const [fashionProducts, setFashionProducts] = useState(initialProducts);
+  const [sort, setSort] = useState("Default");
+
+  const handleSort = (value) => {
+    setSort(value);
+
+    if (value === "Price : Low to High") {
+      const sorted = [...fashionProducts].sort(
+        (a, b) => a.price - b.price
+      );
+      setFashionProducts(sorted);
+    }
+
+    if (value === "Price : High to Low") {
+      const sorted = [...fashionProducts].sort(
+        (a, b) => b.price - a.price
+      );
+      setFashionProducts(sorted);
+    }
+
+    if (value === "Default") {
+      setFashionProducts(initialProducts);
+    }
+  };
 
   return (
     <div className={styles.pageg}>
       <Navbar />
+
+      {/* SORT BAR */}
+      <div className={styles.sortBarg}>
+        <span className={styles.sortLabelg}>Sort by</span>
+
+        <select
+          value={sort}
+          onChange={(e) => handleSort(e.target.value)}
+          className={styles.sortSelectg}
+        >
+          <option>Default</option>
+          <option>Price : Low to High</option>
+          <option>Price : High to Low</option>
+        </select>
+      </div>
 
       <div className={styles.gridWrapperg}>
         {fashionProducts.map((item) => (

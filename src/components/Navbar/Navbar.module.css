@@ -69,8 +69,10 @@
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.14);
   background: #fafafa;
+  font-size: 14px;
 
 }
+
 
 .righta {
   display: flex;

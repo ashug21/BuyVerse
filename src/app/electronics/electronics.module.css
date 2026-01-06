@@ -101,6 +101,48 @@
     background: #f7ca00;
     transform: translateY(-1px);
   }
+
+  .sortBarf {
+    max-width: 1500px;
+    margin: 24px auto 0;
+    padding: 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .sortLabelf {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f1111;
+  }
+  
+  .sortSelectf {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sortSelectf:hover {
+    border-color: #4b5563;
+  }
+  
+  .sortSelectf:focus {
+    border-color: #111827;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 560px) {
+    .sortBarf {
+      padding: 0 20px;
+    }
+  }
+  
   
   /* OPTIONAL: RESPONSIVE FALLBACKS */
   @media (max-width: 1200px) {
