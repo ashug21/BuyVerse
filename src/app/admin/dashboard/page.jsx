@@ -19,6 +19,8 @@ useEffect(() => {
     <div>
         <AdminNavbar/>
       <h1>Admin Dashboard Page</h1>
+
+      <h2> Payments history</h2>
     </div>
   )
 }
