@@ -92,7 +92,7 @@
   }
   
   .loginButtoni:hover {
-    background: #020617;
+    background: rgba(0, 0, 0, 0.75);
   }
   
   .signupTexti {
