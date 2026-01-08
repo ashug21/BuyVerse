@@ -1,272 +1,285 @@
 .navbara {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(18, 15, 15, 0.92);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    color : white
-  }
-  
-  .navContainera {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 26px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .lefta {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  .menuButtona {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoImagea {
-    width: 26px;
-    height: 26px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(18, 15, 15, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: white;
+}
 
-  }
-  
-  .logoa {
-    font-size: 30px;
-    font-weight: 700;
+.navContainera {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 26px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    text-decoration: none;
-  }
-  
-  .menua {
-    display: flex;
-    gap: 34px;
-  }
-  
-  .menuItema {
-    font-size: 16px;
-    font-weight: 500;
+.lefta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-    text-decoration: none;
-  }
-  
-  .centera {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  
-  }
-  
-  .searchInputa {
-    width: 100%;
-    max-width: 520px;
-    padding: 14px 20px;
-    border-radius: 999px;
-    border: 1px solid rgba(0, 0, 0, 0.14);
-    background: #fafafa;
-    font-size: 14px;
-  
-  }
-  
-  
-  .righta {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-  }
-  
-  .accountWrapa {
-    position: relative;
-  }
-  
-  .iconTexta {
-    cursor: pointer;
-    font-weight: 500;
-  }
-  
-  .careta {
-    font-size: 12px;
-  }
-  
-  .accountDropdowna {
-    position: absolute;
-    top: calc(100% + 14px);
-    right: 0;
-    width: 240px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.18);
-  }
-  
-  .dropdownTitlea {
-    padding: 16px 20px;
-    font-size: 13px;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .dropdownItema {
-    display: block;
-    padding: 16px 20px;
-    color: #111;
-    text-decoration: none;
-  }
-  
-  .dropdownItema:hover {
-    background: #f5f5f5;
-  }
-  
-  .cartWrapa {
-    position: relative;
-  }
-  
-  .cartTexta {
-    font-weight: 600;
-  }
-  
-  .cartBada {
-    position: absolute;
-    top: -8px;
-    right: -14px;
-    background: #111;
-    color: #fff;
-    font-size: 12px;
-    padding: 4px 7px;
-    border-radius: 999px;
-  }
-  
-  .overlaya {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: 200;
-  }
-  
-  .sidebara {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 320px;
-    height: 100vh;
-    background: #fff;
-    z-index: 300;
-    padding: 20px 0;
-    box-shadow: 30px 0 60px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sidebarHeadera {
-    padding: 0 20px 16px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .closeBtna {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-  }
-  
-  .sidebarMenua {
-    display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-  }
-  
-  .sidebarLinka {
-    padding: 14px 20px;
-    font-size: 15px;
-    text-decoration: none;
-    color: #111;
-  }
-  
-  .sidebarLinka:hover {
-    background: #f3f4f6;
-  }
-  
-  
-  .searchDropdowna {
-    position: absolute;
-    top: 110%;
-    left: 0;
-    width: 100%;
-    max-height: 360px;
-    overflow-y: auto;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    z-index: 999;
-    padding: 6px 0;
-  }
-  
-  .searchCarda {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #111;
-    transition: background 0.2s ease;
-  }
-  
-  .searchCarda:hover {
-    background: #f5f5f5;
-  }
-  
-  .searchImagea {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-  
-  .searchTexta {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  
-  .searchNamea {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 260px;
-  }
-  
-  .searchPricea {
-    font-size: 13px;
-    font-weight: 600;
-    color: #16a34a;
-  }
-  
-  
-  .accountDropdowna button.dropdownItema {
-    width: 100%;
-    background: transparent;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 16px 20px;
-    color: #111;
-  }
-  
-  .accountDropdowna button.dropdownItema:hover {
-    background: #f5f5f5;
-  }
-  
+.menuButtona {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logoImagea {
+  width: 26px;
+  height: 26px;
+}
+
+.logoa {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menua {
+  display: flex;
+  gap: 34px;
+}
+
+.menuItema {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.centera {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInputa {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fafafa;
+  font-size: 14px;
+}
+
+.righta {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.accountWrapa {
+  position: relative;
+}
+
+.iconTexta {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.careta {
+  font-size: 12px;
+}
+
+.accountDropdowna {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: 240px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.dropdownTitlea {
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdownItema {
+  display: block;
+  padding: 16px 20px;
+  color: #111;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdownItema:hover {
+  background: #f5f5f5;
+}
+
+.cartWrapa {
+  position: relative;
+}
+
+.cartTexta {
+  font-weight: 600;
+}
+
+.cartBada {
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 7px;
+  border-radius: 999px;
+}
+
+.overlaya {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 200;
+}
+
+.sidebara {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  z-index: 300;
+  padding: 20px 0;
+  box-shadow: 30px 0 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeadera {
+  padding: 0 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.closeBtna {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.sidebarMenua {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.sidebarLinka {
+  padding: 14px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #111;
+}
+
+.sidebarLinka:hover {
+  background: #f3f4f6;
+}
+
+.searchDropdowna {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  max-height: 360px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  padding: 6px 0;
+}
+
+.searchCarda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #111;
+  transition: background 0.2s ease;
+}
+
+.searchCarda:hover {
+  background: #f5f5f5;
+}
+
+.searchImagea {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.searchTexta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.searchNamea {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.searchPricea {
+  font-size: 13px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.accountDropdowna button.dropdownItema {
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 16px 20px;
+  color: #111;
+}
+
+.accountDropdowna button.dropdownItema:hover {
+  background: #f5f5f5;
+}
+
+.righta .dropdownItema {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}

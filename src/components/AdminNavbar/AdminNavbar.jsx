@@ -17,15 +17,18 @@ const AdminNavbar = () => {
     localStorage.removeItem("admin");
     router.replace("/");
   }
+
+
+
   return (
     <>
       <header className={styles.navbara}>
         <div className={styles.navContainera}>
           <div className={styles.lefta}>
 
-            <Link href="/" className={styles.logoa}>
+            <button onClick={logOutAdmin} className={styles.logoa}>
               BuyVerse
-            </Link>
+            </button>
 
             <nav className={styles.menua}>
 
