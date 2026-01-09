@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { products } from "@/products";
@@ -12,12 +12,16 @@ const ProductPage = ({ params }) => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  const { id } = React.use(params);
+  const resolvedParams = React.use(params);
+  const { id } = resolvedParams;
 
   const product = products.find((item) => String(item.id) === id);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cartState, setCartState] = useState("idle");
+
+  const [comment, setComment] = useState("");
+  const [totalcomments, setTotalComments] = useState([]);
 
   if (!product) {
     return (
@@ -114,6 +118,45 @@ const ProductPage = ({ params }) => {
     </svg>
   );
 
+  const fetchComments = async () => {
+    const res = await fetch(`/api/comments?productId=${product.id}`);
+    const data = await res.json();
+    setTotalComments(data);
+  };
+
+  useEffect(() => {
+    fetchComments();
+  }, [id]);
+
+  const handleCommentSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!session) {
+      toast.error("Login required");
+      router.push("/login");
+      return;
+    }
+
+    const text = comment.trim();
+    if (!text) return;
+
+    const res = await fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        description: text,
+        productId: String(product.id),
+      }),
+    });
+
+    if (res.ok) {
+      toast.success("Comment added");
+      setComment("");
+      fetchComments();
+    }
+  };
+
+
   return (
     <>
       <Navbar />
@@ -195,7 +238,62 @@ const ProductPage = ({ params }) => {
         </div>
       </div>
 
-      <br /><br /><br /><br /><br /><br />
+
+      <div className={styles.reviewSection}>
+        <form className={styles.reviewForm} onSubmit={handleCommentSubmit}>
+          <p className={styles.reviewHeading}>
+            Review this product <br />
+            <span>Share your thoughts with other customers</span>
+          </p>
+
+          <label className={styles.reviewLabel}>Write a Review</label>
+
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            className={styles.reviewTextarea}
+            placeholder="Write your review here..."
+          />
+
+          <button type="submit" className={styles.reviewSubmit}>
+            Submit
+          </button>
+        </form>
+      </div>
+
+      {/* REVIEWS BELOW FORM */}
+
+      <p className={styles.reviewListHeading}>Top reviews from India</p>
+      <div className={styles.reviewList}>
+  {totalcomments.length === 0 && (
+    <div className={styles.noReview}>
+      No reviews yet. Be the first to review this product.
+    </div>
+  )}
+
+  {totalcomments.map((c) => (
+    <div key={c._id} className={styles.reviewItem}>
+      <div className={styles.reviewTop}>
+        <span className={styles.reviewerName}>{c.name}</span>
+        <span className={styles.reviewDate}>
+          {new Date(c.createdAt).toLocaleDateString()}
+        </span>
+      </div>
+
+      <div className={styles.reviewContent}>
+        {c.description}
+      </div>
+    </div>
+  ))}
+</div>
+
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   );
