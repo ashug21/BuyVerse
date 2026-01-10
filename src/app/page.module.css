@@ -81,6 +81,63 @@ a.secondary {
   color: #000000;
 }
 
+.offerBar {
+ 
+  position: relative;
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fff7e6;
+  border: 1px solid #f0c36d;
+  overflow: hidden;
+}
+
+/* animated overlay */
+.offerBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 200, 120, 0.6),
+    transparent
+  );
+  animation: sweep 2.8s ease-in-out infinite;
+}
+
+.offerText {
+  margin-left: 580px;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.offerText strong {
+  color: #b12704;
+  font-weight: 700;
+}
+
+@keyframes sweep {
+  0% {
+    left: -40%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: #383838;

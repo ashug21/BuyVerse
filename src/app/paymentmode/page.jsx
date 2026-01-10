@@ -5,6 +5,7 @@ import styles from "./paymentmode.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const PaymentsPage = () => {
   const router = useRouter();
@@ -43,19 +44,40 @@ const PaymentsPage = () => {
   const delivery = itemsTotal <= 10000 ? 0 : 120;
   const finalTotal = itemsTotal + tax + delivery;
 
+  const [coupon, setCoupon] = useState("");
+  const [totalAfterCoupon, setTotalAfterCoupon] = useState(null);
+
+  const payableTotal = totalAfterCoupon || finalTotal;
+
+
+  const handleCouponLogic = (e) => {
+    e.preventDefault();
+  
+    const validCoupon = process.env.NEXT_PUBLIC_COUPONS;
+    const enteredCoupon = coupon.replace(/^\s+/, "");
+  
+    if (enteredCoupon && validCoupon.includes(enteredCoupon)) {
+      const discount = finalTotal * 0.1;
+      const newPrice = Math.round(finalTotal - discount);
+  
+      setTotalAfterCoupon(newPrice);
+      toast.success("Coupon Applied");
+    } else {
+      toast.error("Invalid Coupon");
+    }
+  };
+
   const title = cart
     .map((item) => `${item.name} x${item.qty}`)
     .join(", ");
 
   const placeOrder = async () => {
     try {
-
-
       if (paymentMethod === "Upi") {
         const res = await fetch("/api/payment/create-order", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ amount: finalTotal }),
+          body: JSON.stringify({ amount: payableTotal }),
         });
 
         const { order } = await res.json();
@@ -73,8 +95,6 @@ const PaymentsPage = () => {
           name: "BuyVerse",
           description: "Order Payment",
           handler: async function () {
-
-
             const orderRes = await fetch("/api/order", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -82,9 +102,9 @@ const PaymentsPage = () => {
                 title,
                 itemsTotal,
                 delivery,
-                total: finalTotal,
+                total: payableTotal,
                 paymentMethod: "UPI",
-                paymentStatus: "Paid", 
+                paymentStatus: "Paid",
               }),
             });
 
@@ -110,8 +130,6 @@ const PaymentsPage = () => {
         return;
       }
 
-
-
       const res = await fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -119,9 +137,9 @@ const PaymentsPage = () => {
           title,
           itemsTotal,
           delivery,
-          total: finalTotal,
+          total: payableTotal,
           paymentMethod,
-          paymentStatus: "Pending", 
+          paymentStatus: "Pending",
         }),
       });
 
@@ -147,7 +165,6 @@ const PaymentsPage = () => {
           <h1 className={styles.title}>Checkout</h1>
 
           <div className={styles.layout}>
-            {/* LEFT */}
             <div className={styles.left}>
               <section className={styles.card}>
                 <h2 className={styles.cardTitle}>Delivery Address</h2>
@@ -196,24 +213,6 @@ const PaymentsPage = () => {
                   <span>UPI / Paytm / PhonePe / Google Pay / Amazon Pay</span>
                 </div>
 
-                {/* <div className={styles.paymentOption}>
-                  <input
-                    type="radio"
-                    name="payment"
-                    onChange={() => setPaymentMethod("Card")}
-                  />
-                  <Image src="/credit.png" alt="Card" width={60} height={24} />
-                  <span>Credit / Debit Card</span>
-                </div> */}
-{/* 
-                <div className={styles.cardForm}>
-                  <input placeholder="Card Number" />
-                  <div className={styles.cardRow}>
-                    <input placeholder="MM/YY" />
-                    <input placeholder="CVV" />
-                  </div>
-                </div> */}
-
                 <div className={styles.paymentOption}>
                   <input
                     type="radio"
@@ -225,7 +224,6 @@ const PaymentsPage = () => {
               </section>
             </div>
 
-            {/* RIGHT */}
             <div className={styles.right}>
               <section className={styles.summaryCard}>
                 <h2 className={styles.cardTitle}>Order Summary</h2>
@@ -260,12 +258,27 @@ const PaymentsPage = () => {
 
                 <div className={styles.totalRow}>
                   <span>Total</span>
-                  <span>₹ {finalTotal}</span>
+                  <span>₹ {payableTotal}</span>
                 </div>
+
+                <form onSubmit={handleCouponLogic} className={styles.couponBox}>
+                  <label className={styles.couponLabel}>Have a Coupon?</label>
+                  <div className={styles.couponInputWrap}>
+                    <input
+                      className={styles.couponInput}
+                      value={coupon}
+                      onChange={(e) => setCoupon(e.target.value)}
+                      placeholder="Enter coupon here"
+                    />
+                    <button type="submit" className={styles.couponBtn}>
+                      Apply
+                    </button>
+                  </div>
+                </form>
 
                 <button
                   className={styles.payBtn}
-                  disabled={!paymentMethod}
+                  disabled={!paymentMethod || cart.length === 0 || payableTotal <= 0}
                   onClick={placeOrder}
                 >
                   Place Order

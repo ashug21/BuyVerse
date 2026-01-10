@@ -1,3 +1,4 @@
+
 .page {
     background: #f1f3f6;
     min-height: 100vh;
@@ -139,5 +140,62 @@
   
   .payBtn:disabled:hover {
     background: #e5e7eb;
+  }
+  
+  .couponBox {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px dashed #d5d9d9;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+  
+  .couponLabel {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .couponInputWrap {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .couponInput {
+    flex: 1;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .couponInput:focus {
+    border-color: #f08804;
+    box-shadow: 0 0 0 2px rgba(240, 136, 4, 0.3);
+  }
+  
+  .couponBtn {
+    height: 36px;
+    padding: 0 16px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .couponBtn:hover {
+    background: #f7ca00;
+  }
+  
+  .couponSuccess {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #067d62;
+    font-weight: 600;
   }
   
