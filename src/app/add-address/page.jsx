@@ -47,23 +47,24 @@ const AddressPage = () => {
       const res = await fetch(`/api/address/${id}`, {
         method: "DELETE",
       });
-
-      const data = await res.json();
-
+  
       if (!res.ok) {
-        console.log(data.message || "Failed to delete address");
+        console.log("Failed to delete address");
         return;
       }
-
+  
       if (selectedAddress === id) {
         setSelectedAddress(null);
       }
-
-      getAddress();
+  
+      toast.success("Address deleted");
+      setAddresses((prev) => prev.filter((a) => a._id !== id));
+  
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

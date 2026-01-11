@@ -398,6 +398,35 @@
 }
 
 
+.addToWishlist {
+  background: #ffffff;
+  width: 200px;
+  border: 2px solid #2874f0;
+  color: #2874f0;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addToWishlist:hover {
+  background: #2874f0;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(40, 116, 240, 0.35);
+}
+
+.addToWishlist:active {
+  background: #1c5fd4;
+  border-color: #1c5fd4;
+}
+
+.addToWishlist:focus {
+  outline: none;
+}
+
+
 
 
 @keyframes pressIn {

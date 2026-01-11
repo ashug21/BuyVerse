@@ -7,11 +7,12 @@ import { useSession, signOut } from "next-auth/react";
 import styles from "./Navbar.module.css";
 import menuIcon from "../../../public/menus.png";
 import { products } from "@/products";
+import menuIcon2 from '../../../public/menu.png'
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { data: session, status } = useSession();
 
-  
   const [open, setOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -30,9 +31,7 @@ const Navbar = () => {
     }
 
     const filtered = products.filter(
-      (item) =>
-        item.name &&
-        item.name.toLowerCase().includes(query)
+      (item) => item.name && item.name.toLowerCase().includes(query)
     );
 
     setFilteredProducts(filtered.slice(0, 6));
@@ -40,26 +39,52 @@ const Navbar = () => {
 
   if (status === "loading") return null;
 
+
+
+  const handleLogout = async() => {
+
+    localStorage.removeItem("cart");
+    signOut();
+  }
+
   if (!session) {
     return (
       <>
         <header className={styles.navbara}>
           <div className={styles.navContainera}>
             <div className={styles.lefta}>
+
+              <div>
+                
+              </div>
               <button
                 className={styles.menuButtona}
                 onClick={() => setSidebarOpen(true)}
               >
-                <Image src={menuIcon} alt="Menu" className={styles.logoImagea} />
+                <Image
+                  src={menuIcon2}
+                  alt="Menu"
+                  className={styles.logoImagea}
+                />
               </button>
 
-              <Link href="/" className={styles.logoa}>BuyVerse</Link>
+              <Link href="/" className={styles.logoa}>
+                BuyVerse
+              </Link>
 
               <nav className={styles.menua}>
-                <Link href="/" className={styles.menuItema}>Home</Link>
-                <Link href="/electronics" className={styles.menuItema}>Electronics</Link>
-                <Link href="/fashion" className={styles.menuItema}>Fashion</Link>
-                <Link href="/skincare" className={styles.menuItema}>Skincare</Link>
+                <Link href="/" className={styles.menuItema}>
+                  Home
+                </Link>
+                <Link href="/electronics" className={styles.menuItema}>
+                  Electronics
+                </Link>
+                <Link href="/fashion" className={styles.menuItema}>
+                  Fashion
+                </Link>
+                <Link href="/skincare" className={styles.menuItema}>
+                  Skincare
+                </Link>
               </nav>
             </div>
 
@@ -119,8 +144,12 @@ const Navbar = () => {
 
                 {open && (
                   <div className={styles.accountDropdowna}>
-                    <Link href="/signup" className={styles.dropdownItema}>Sign Up</Link>
-                    <Link href="/login" className={styles.dropdownItema}>Login</Link>
+                    <Link href="/signup" className={styles.dropdownItema}>
+                      Sign Up
+                    </Link>
+                    <Link href="/login" className={styles.dropdownItema}>
+                      Login
+                    </Link>
                   </div>
                 )}
               </div>
@@ -137,7 +166,7 @@ const Navbar = () => {
 
             <aside className={styles.sidebara}>
               <div className={styles.sidebarHeadera}>
-                <span>Menu</span>
+                <span>My Profile</span>
                 <button
                   className={styles.closeBtna}
                   onClick={() => setSidebarOpen(false)}
@@ -147,12 +176,18 @@ const Navbar = () => {
               </div>
 
               <nav className={styles.sidebarMenua}>
-                <Link href="/" className={styles.sidebarLinka}>Home</Link>
-                <Link href="/electronics" className={styles.sidebarLinka}>Electronics</Link>
-                <Link href="/fashion" className={styles.sidebarLinka}>Fashion</Link>
-                <Link href="/skincare" className={styles.sidebarLinka}>Skincare</Link>
-                <Link href="/orders" className={styles.sidebarLinka}>Orders</Link>
-                <Link href="/cart" className={styles.sidebarLinka}>Cart</Link>
+                <Link href="/" className={styles.sidebarLinka}>
+                  Home
+                </Link>
+                <Link href="/orders" className={styles.sidebarLinka}>
+                  Orders
+                </Link>
+                <Link href="/wishlist" className={styles.sidebarLinka}>
+                  My Wishlist
+                </Link>
+                <Link href="/cart" className={styles.sidebarLinka}>
+                  Cart
+                </Link>
               </nav>
             </aside>
           </>
@@ -170,16 +205,27 @@ const Navbar = () => {
               className={styles.menuButtona}
               onClick={() => setSidebarOpen(true)}
             >
-              <Image src={menuIcon} alt="Menu" className={styles.logoImagea} />
+
+              <Image src={menuIcon2} alt="Menu" className={styles.logoImagea} />
             </button>
 
-            <Link href="/" className={styles.logoa}>BuyVerse</Link>
+            <Link href="/" className={styles.logoa}>
+              BuyVerse
+            </Link>
 
             <nav className={styles.menua}>
-              <Link href="/" className={styles.menuItema}>Home</Link>
-              <Link href="/electronics" className={styles.menuItema}>Electronics</Link>
-              <Link href="/fashion" className={styles.menuItema}>Fashion</Link>
-              <Link href="/skincare" className={styles.menuItema}>Skincare</Link>
+              <Link href="/" className={styles.menuItema}>
+                Home
+              </Link>
+              <Link href="/electronics" className={styles.menuItema}>
+                Electronics
+              </Link>
+              <Link href="/fashion" className={styles.menuItema}>
+                Fashion
+              </Link>
+              <Link href="/skincare" className={styles.menuItema}>
+                Skincare
+              </Link>
             </nav>
           </div>
 
@@ -230,17 +276,13 @@ const Navbar = () => {
             </Link>
 
             <div className={styles.accountWrapa}>
-              <span
-                className={styles.iconTexta}
-                onClick={() => setOpen(!open)}
-              >
+              <span className={styles.iconTexta} onClick={() => setOpen(!open)}>
                 {session.user.name} ▾
               </span>
 
               {open && (
                 <div className={styles.accountDropdowna}>
-                  <button
-                    onClick={() => signOut()}
+                  <button onClick={handleLogout}
                     className={styles.dropdownItema}
                   >
                     LogOut
@@ -261,7 +303,7 @@ const Navbar = () => {
 
           <aside className={styles.sidebara}>
             <div className={styles.sidebarHeadera}>
-              <span>Menu</span>
+              <span>My Profile</span>
               <button
                 className={styles.closeBtna}
                 onClick={() => setSidebarOpen(false)}
@@ -271,12 +313,18 @@ const Navbar = () => {
             </div>
 
             <nav className={styles.sidebarMenua}>
-              <Link href="/" className={styles.sidebarLinka}>Home</Link>
-              <Link href="/electronics" className={styles.sidebarLinka}>Electronics</Link>
-              <Link href="/fashion" className={styles.sidebarLinka}>Fashion</Link>
-              <Link href="/skincare" className={styles.sidebarLinka}>Skincare</Link>
-              <Link href="/orders" className={styles.sidebarLinka}>Orders</Link>
-              <Link href="/cart" className={styles.sidebarLinka}>Cart</Link>
+              <Link href="/" className={styles.sidebarLinka}>
+                Home
+              </Link>
+              <Link href="/wishlist" className={styles.sidebarLinka}>
+                My Wishlist
+              </Link>
+              <Link href="/orders" className={styles.sidebarLinka}>
+               My Orders
+              </Link>
+              <Link href="/cart" className={styles.sidebarLinka}>
+                Cart Items
+              </Link>
             </nav>
           </aside>
         </>

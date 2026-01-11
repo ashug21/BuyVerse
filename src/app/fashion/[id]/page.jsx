@@ -159,6 +159,43 @@ const FashionProductPage = ({ params }) => {
     }
   };
 
+
+  const handleWishList = async (e) => {
+    e.preventDefault();
+  
+    if (status === "loading") return;
+  
+    if (!session) {
+      toast.error("Please login to add items to wishlist");
+      router.push("/login");
+      return;
+    }
+  
+    try {
+      const res = await fetch("/api/wishlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: product.name,
+          price: product.price,
+          img: product.images[0],
+        }),
+      });
+  
+      const data = await res.json();
+  
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to add to wishlist");
+      }
+  
+      toast.success("Added to wishlist");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -230,6 +267,9 @@ const FashionProductPage = ({ params }) => {
               Buy Now
             </button>
           </div>
+          <button onClick={handleWishList} className={styles.addToWishlist}>
+              Add To WishList❤️
+            </button>
         </div>
       </div>
 

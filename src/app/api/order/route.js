@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "../../../../lib/db";
 import Order from "../../../../models/Order";
 
-// below is to make it with email -> details 
+
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 

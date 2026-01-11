@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Comment from "../../../../models/Comment";
 import { connectDB } from "../../../../lib/db";
 import { getServerSession } from "next-auth";
+import { authOptions } from "../auth/[...nextauth]/route";
 
 
 export async function POST(req){
@@ -10,7 +11,7 @@ export async function POST(req){
 
         await connectDB();
 
-        const session = await getServerSession();
+        const session = await getServerSession(authOptions);
 
 
         if (!session) {
@@ -30,10 +31,10 @@ export async function POST(req){
 
         const comment = await Comment.create({name : session.user.name , description , productId});
 
-        return NextResponse.json({success : true , message : "Comment added" , comment});
+        return NextResponse.json({success : true , message : "Comment added" , comment}, { status: 201 });
         
     } catch (error) {
-        return NextResponse.json({success : false , message : error.message});
+        return NextResponse.json({success : false , message : error.message},  { status: 500 });
     }
 }
 

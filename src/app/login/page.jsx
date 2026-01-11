@@ -79,6 +79,9 @@ const Login = () => {
               <button type="submit" className={styles.loginButtoni}>
                 Login
               </button>
+              <button onClick={() => signIn("google")}>
+                Sign in with Google
+              </button>
             </form>
 
             <p className={styles.signupTexti}>
@@ -93,8 +96,8 @@ const Login = () => {
             <div className={styles.loginPromoi}>
               <h2>Elevate your style</h2>
               <p>
-                Access exclusive fashion drops, faster checkout, and personalized
-                recommendations.
+                Access exclusive fashion drops, faster checkout, and
+                personalized recommendations.
               </p>
             </div>
           </div>
