@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut,signIn } from "next-auth/react";
 import styles from "./Navbar.module.css";
 import menuIcon from "../../../public/menus.png";
 import { products } from "@/products";
 import menuIcon2 from '../../../public/menu.png'
 import toast from "react-hot-toast";
+
 
 const Navbar = () => {
   const { data: session, status } = useSession();
@@ -46,6 +47,36 @@ const Navbar = () => {
     localStorage.removeItem("cart");
     signOut();
   }
+
+
+  const handleGuestLogin = async () => {
+    try {
+      const email = process.env.NEXT_PUBLIC_GUEST_LOGIN_EMAIL;
+      const password = process.env.NEXT_PUBLIC_GUEST_LOGIN_PASSWORD;
+  
+      if (!email || !password) {
+        toast.error("Guest credentials not configured");
+        return;
+      }
+  
+      const result = await signIn("credentials", {
+        email : email,
+        password : password,
+        redirect: false,
+      });
+  
+      if (result?.error) {
+        toast.error("Guest login failed");
+        return;
+      }
+  
+      toast.success("Guest Logged In");
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong");
+    }
+  };
+  
 
   if (!session) {
     return (
@@ -150,6 +181,9 @@ const Navbar = () => {
                     <Link href="/login" className={styles.dropdownItema}>
                       Login
                     </Link>
+                    <button onClick={handleGuestLogin} className={styles.dropdownItema}>
+                      Guest Login
+                    </button>
                   </div>
                 )}
               </div>

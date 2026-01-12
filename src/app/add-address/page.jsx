@@ -77,6 +77,37 @@ const AddressPage = () => {
       return;
     }  
 
+
+    if(!fullname || !mobile || !pincode || !address1 || !address2|| !city || !state){
+        toast.error("All Fields are required!");
+        return;
+    }
+
+    // if(pincode.toLowerCase() <= 'z' && pincode.toLowerCase() >= 'a'){
+    //   toast.error("Pincode can only contain numbers");
+    //   return;
+    // }
+
+    if (!/^\d+$/.test(pincode)) {
+      toast.error("Pincode can only contain numbers");
+      return;
+    }
+
+    if(pincode.length !== 6){
+      toast.error("Enter a valid Pincode");
+      return;
+    }
+
+    if (!/^\d+$/.test(mobile)) {
+      toast.error("Mobile Number should contain numbers");
+      return;
+    }
+    
+    if(mobile.length !== 10){
+      toast.error("Enter a valid Mobile number");
+      return;
+    }
+      
     const res = await fetch("/api/address", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

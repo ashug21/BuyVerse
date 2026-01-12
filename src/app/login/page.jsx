@@ -4,12 +4,15 @@ import Link from "next/link";
 import styles from "./login.module.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { signIn, useSession } from "next-auth/react";
 import toast from "react-hot-toast";
+import google_icon from "../../../public/google.png";
 
 const Login = () => {
   const router = useRouter();
+
+  const {data : session , status} = useSession();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,6 +43,49 @@ const Login = () => {
       router.push("/");
     }
   };
+
+  async function handleGoogleLogin() {
+    await signIn("google", {
+      callbackUrl: "/",
+    });
+  }
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.replace("/");
+    }
+  }, [status, router]);
+
+
+  const handleGuestLogin = async () => {
+    try {
+      const email = process.env.NEXT_PUBLIC_GUEST_LOGIN_EMAIL;
+      const password = process.env.NEXT_PUBLIC_GUEST_LOGIN_PASSWORD;
+  
+      if (!email || !password) {
+        toast.error("Guest credentials not configured");
+        return;
+      }
+  
+      const result = await signIn("credentials", {
+        email : email,
+        password : password,
+        redirect: false,
+      });
+  
+      if (result?.error) {
+        toast.error("Guest login failed");
+        return;
+      }
+  
+      toast.success("Guest Logged In");
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong");
+    }
+  };
+  
+  
 
   return (
     <div>
@@ -75,12 +121,24 @@ const Login = () => {
                   className={styles.inputi}
                 />
               </div>
-
+            
               <button type="submit" className={styles.loginButtoni}>
                 Login
               </button>
-              <button onClick={() => signIn("google")}>
-                Sign in with Google
+              <button onClick={handleGuestLogin}  type="submit" className={styles.loginButtoni}>
+              Login As Guest
+              </button>
+              <button
+                type="button"
+                className={styles.googlesignupbuttoni}
+                onClick={handleGoogleLogin}
+              >
+                <img
+                  src={google_icon.src}
+                  alt="Google"
+                  className={styles.googleIconi}
+                />
+                <span>Sign in with Google</span>
               </button>
             </form>
 

@@ -22,6 +22,17 @@ const Signup = () => {
       return;
     }
 
+    if(password.length !== 8){
+      toast.error("Password should be of 8 digits");
+      return;
+    }
+
+    if(password === "12345678" || password === "password" || password === "00000000" || password === "11111111"
+      || password === "qwertyui"){
+      toast("Choose a Strong Password");
+      return;
+    }
+
     const loadingToast = toast.loading("Creating account...");
 
     try {
@@ -93,7 +104,7 @@ const Signup = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder="Password should be of 8 letters"
                   className={styles.inputh}
                 />
               </div>

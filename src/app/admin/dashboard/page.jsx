@@ -7,6 +7,7 @@ import styles from "./dashboard.module.css";
 
 const AdminDashboard = () => {
   const [payments, setPayments] = useState([]);
+  const [totalearnings , setTotalEarnings] = useState("");
   const router = useRouter();
 
   useEffect(() => {
@@ -20,6 +21,25 @@ const AdminDashboard = () => {
       .then((res) => res.json())
       .then((data) => setPayments(data));
   }, []);
+
+
+  function getTotalEarnings() {
+    let sum = 0;
+  
+    payments.forEach((item) => {
+      sum += item.amount;
+    });
+  
+    const total = (sum / 100);
+    setTotalEarnings(total);
+
+  }
+
+  useEffect(() => {
+    getTotalEarnings();
+  }, [payments]);
+  
+  
 
   return (
     <div className={styles.dashboardWrapperw}>
@@ -54,6 +74,23 @@ const AdminDashboard = () => {
             ))}
           </div>
         </div>
+
+              <br/><br/>
+              <br/><br/>
+              <div className={styles.totalEarningsBoxw}>
+  <p className={styles.totalLabelw}>Total Earnings</p>
+  <h2 className={styles.totalValuew}>₹{totalearnings}</h2>
+</div>
+
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
       </div>
     </div>
   );
