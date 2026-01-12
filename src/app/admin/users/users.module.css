@@ -71,3 +71,25 @@
   font-size: 15px;
   color: #9ca3af;
 }
+
+.rowz {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr 2fr 40px;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.binz {
+  width: 30px;
+  height: 30px;
+  justify-self: end;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.binz:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
