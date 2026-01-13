@@ -1,0 +1,89 @@
+.wrapperq {
+    min-height: 100vh;
+    background-color: #0f172a;
+    padding: 28px;
+    color: #e5e7eb;
+  }
+  
+  .titleq {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .emptyq {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+  
+  /* GRID FIX */
+  .cardGridq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* CARD */
+  .cardq {
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cardq:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  }
+  
+  .headerq {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .nameq {
+    font-size: 15px;
+    font-weight: 600;
+    color: #f1f5f9;
+  }
+  
+  .emailq {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+  
+  .dateq {
+    font-size: 11px;
+    color: #64748b;
+    white-space: nowrap;
+  }
+  
+  .contentq {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #e5e7eb;
+    padding-top: 10px;
+    border-top: 1px solid #1e293b;
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .cardGridq {
+      grid-template-columns: 1fr;
+    }
+  }
+  

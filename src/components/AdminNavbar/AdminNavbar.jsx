@@ -41,6 +41,7 @@ const AdminNavbar = () => {
           <Link href="/admin/users" className={styles.menuItema}>Users</Link>
               <Link href="/admin/orders" className={styles.menuItema}>Orders</Link>
               <Link href="/admin/address" className={styles.menuItema}>Address</Link>
+              <Link href="/admin/comments" className={styles.menuItema}>Comments</Link>
                 <button onClick={logOutAdmin} className={styles.dropdownItema}>LogOut</button>
             </div>
           </div>

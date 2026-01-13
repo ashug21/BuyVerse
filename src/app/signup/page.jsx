@@ -22,7 +22,7 @@ const Signup = () => {
       return;
     }
 
-    if(password.length !== 8){
+    if(password.length < 8){
       toast.error("Password should be of 8 digits");
       return;
     }
