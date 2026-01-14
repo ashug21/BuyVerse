@@ -135,3 +135,208 @@
     }
   }
   
+
+
+  /* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+@media (max-width: 1200px) {
+  .bannerb {
+    height: 340px;
+  }
+
+  .contentb {
+    left: 60px;
+    bottom: 50px;
+    max-width: 380px;
+  }
+
+  .titleb {
+    font-size: 30px;
+  }
+
+  .descb {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Tablets Landscape (≤ 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  .bannerb {
+    height: 320px;
+  }
+
+  .contentb {
+    left: 48px;
+    bottom: 44px;
+    max-width: 360px;
+  }
+
+  .titleb,
+  .descb,
+  .actionsb {
+    margin-left: 80px;
+  }
+
+  .titleb {
+    font-size: 28px;
+  }
+
+  .primaryBtnb,
+  .secondaryBtnb {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Tablets Portrait (≤ 900px)
+   ========================= */
+@media (max-width: 900px) {
+  .bannerb {
+    height: 300px;
+  }
+
+  .contentb {
+    left: 40px;
+    bottom: 38px;
+    max-width: 320px;
+  }
+
+  .titleb,
+  .descb,
+  .actionsb {
+    margin-left: 60px;
+  }
+
+  .titleb {
+    font-size: 26px;
+  }
+
+  .descb {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Large Phones / Small Tablets (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .bannerb {
+    height: 280px;
+  }
+
+  .slideb img {
+    object-fit: cover;
+  }
+
+  .contentb {
+    left: 32px;
+    bottom: 32px;
+    max-width: 100%;
+  }
+
+  .titleb,
+  .descb,
+  .actionsb {
+    margin-left: 0;
+  }
+
+  .titleb {
+    font-size: 24px;
+  }
+
+  .actionsb {
+    gap: 10px;
+  }
+}
+
+/* =========================
+   Standard iPhones (≤ 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .bannerb {
+    height: 260px;
+  }
+
+  .contentb {
+    left: 24px;
+    right: 24px;
+    bottom: 26px;
+    max-width: none;
+  }
+
+  .titleb {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .descb {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .actionsb {
+    flex-wrap: wrap;
+  }
+
+  .primaryBtnb,
+  .secondaryBtnb {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Small iPhones (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .bannerb {
+    height: 240px;
+  }
+
+  .contentb {
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+  }
+
+  .titleb {
+    font-size: 20px;
+  }
+
+  .descb {
+    font-size: 12.5px;
+  }
+
+  .actionsb {
+    gap: 8px;
+  }
+}
+
+/* =========================
+   Very Small Devices (≤ 360px)
+   ========================= */
+@media (max-width: 360px) {
+  .bannerb {
+    height: 220px;
+  }
+
+  .contentb {
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+  }
+
+  .titleb {
+    font-size: 18px;
+  }
+
+  .primaryBtnb,
+  .secondaryBtnb {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}

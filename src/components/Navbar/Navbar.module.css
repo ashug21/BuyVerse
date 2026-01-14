@@ -323,3 +323,200 @@
   font-size: 20px !important;
   
 }
+
+
+/* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+   @media (max-width: 1200px) {
+    .navContainera {
+      padding: 22px 28px;
+    }
+  
+    .menua {
+      gap: 24px;
+    }
+  
+    .righta {
+      gap: 26px;
+    }
+  
+    .searchInputa {
+      max-width: 620px;
+    }
+  }
+  
+  /* =========================
+     Tablets Landscape (≤ 1024px)
+     ========================= */
+  @media (max-width: 1024px) {
+    .menua {
+      display: none;
+    }
+  
+    .centera {
+      flex: 1.5;
+    }
+  
+    .searchInputa {
+      max-width: 560px;
+      padding: 12px 18px;
+    }
+  
+    .righta {
+      gap: 22px;
+    }
+  
+    .logoa {
+      font-size: 26px;
+    }
+  }
+  
+  /* =========================
+     Tablets Portrait (≤ 900px)
+     ========================= */
+  @media (max-width: 900px) {
+    .navContainera {
+      padding: 20px 20px;
+    }
+  
+    .centera {
+      flex: 1;
+    }
+  
+    .searchInputa {
+      max-width: 100%;
+    }
+  
+    .accountDropdowna {
+      width: 220px;
+    }
+  }
+  
+  /* =========================
+     Large Phones (≤ 768px)
+     ========================= */
+  @media (max-width: 768px) {
+    .navContainera {
+      flex-wrap: nowrap;
+      gap: 12px;
+    }
+  
+    .lefta {
+      gap: 10px;
+    }
+  
+    .logoa {
+      font-size: 24px;
+    }
+  
+    .searchInputa {
+      font-size: 13px;
+      padding: 11px 16px;
+    }
+  
+    .righta {
+      gap: 18px;
+    }
+  
+    .cartBada {
+      font-size: 11px;
+      padding: 3px 6px;
+    }
+  
+    .searchDropdowna {
+      max-height: 300px;
+    }
+  }
+  
+  /* =========================
+     Standard iPhones (≤ 600px)
+     ========================= */
+  @media (max-width: 600px) {
+    .navContainera {
+      padding: 16px 14px;
+    }
+  
+    .centera {
+      display: none;
+    }
+  
+    .menuButtona span {
+      margin-left: 0;
+      font-size: 16px;
+    }
+  
+    .profileTexta {
+      display: none;
+    }
+  
+    .righta {
+      gap: 16px;
+    }
+  
+    .cartTexta {
+      font-size: 14px;
+    }
+  
+    .accountDropdowna {
+      width: 200px;
+    }
+  
+    .sidebar {
+      width: 280px;
+    }
+  }
+  
+  /* =========================
+     Small iPhones (≤ 480px)
+     ========================= */
+  @media (max-width: 480px) {
+    .navContainera {
+      padding: 14px 12px;
+    }
+  
+    .logoa {
+      font-size: 22px;
+    }
+  
+    .cartBada {
+      top: -6px;
+      right: -10px;
+    }
+  
+    .sidebar {
+      width: 260px;
+    }
+  
+    .sidebarLinka {
+      font-size: 14px;
+      padding: 12px 18px;
+    }
+  
+    .dropdownItema {
+      font-size: 14px;
+      padding: 14px 18px;
+    }
+  }
+  
+  /* =========================
+     Very Small Devices (≤ 360px)
+     ========================= */
+  @media (max-width: 360px) {
+    .logoa {
+      font-size: 20px;
+    }
+  
+    .righta {
+      gap: 12px;
+    }
+  
+    .cartTexta {
+      font-size: 13px;
+    }
+  
+    .sidebar {
+      width: 240px;
+    }
+  }
+  

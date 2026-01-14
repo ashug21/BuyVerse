@@ -126,54 +126,175 @@
   opacity: 0.7;
 }
 
-/* RESPONSIVE */
 
-@media (max-width: 1200px) {
-  .topAreace {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    padding: 0 48px 56px;
+/* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+   @media (max-width: 1200px) {
+    .topAreace {
+      gap: 48px;
+      padding: 0 56px 56px;
+    }
+  
+    .topAreace::after {
+      left: 56px;
+      right: 56px;
+    }
+  
+    .bottomAreace {
+      padding: 26px 56px;
+    }
   }
-
-  .bottomAreace {
-    padding: 24px 48px;
+  
+  /* =========================
+     Tablets Landscape (≤ 1024px)
+     ========================= */
+  @media (max-width: 1024px) {
+    .topAreace {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding: 0 40px 48px;
+    }
+  
+    .topAreace::after {
+      left: 40px;
+      right: 40px;
+    }
+  
+    .bottomAreace {
+      padding: 24px 40px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      text-align: center;
+    }
+  
+    .countrye {
+      text-align: center;
+    }
   }
-}
-
-@media (max-width: 768px) {
-  .topAreace {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 0 32px 48px;
+  
+  /* =========================
+     Tablets Portrait (≤ 900px)
+     ========================= */
+  @media (max-width: 900px) {
+    .topAreace {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      padding: 0 32px 44px;
+    }
+  
+    .headinge {
+      font-size: 12.5px;
+    }
+  
+    .linke {
+      font-size: 13.5px;
+    }
   }
-
-  .bottomAreace {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 18px;
+  
+  /* =========================
+     Large Phones / Small Tablets (≤ 768px)
+     ========================= */
+  @media (max-width: 768px) {
+    .footere {
+      padding-top: 56px;
+    }
+  
+    .topAreace {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      padding: 0 28px 40px;
+    }
+  
+    .topAreace::after {
+      left: 28px;
+      right: 28px;
+    }
+  
+    .bottomAreace {
+      padding: 22px 28px;
+    }
+  
+    .paymente {
+      justify-content: center;
+    }
   }
-
-  .countrye {
-    text-align: center;
+  
+  /* =========================
+     Standard iPhones (≤ 600px)
+     ========================= */
+  @media (max-width: 600px) {
+    .topAreace {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 0 20px 36px;
+    }
+  
+    .topAreace::after {
+      left: 20px;
+      right: 20px;
+    }
+  
+    .headinge {
+      margin-bottom: 18px;
+    }
+  
+    .linke {
+      margin-bottom: 12px;
+    }
+  
+    .bottomAreace {
+      padding: 20px;
+      gap: 14px;
+    }
+  
+    .copyrighte,
+    .countrye {
+      font-size: 12.5px;
+    }
   }
-}
-
-@media (max-width: 480px) {
-  .topAreace {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 0 24px 40px;
+  
+  /* =========================
+     Small iPhones (≤ 480px)
+     ========================= */
+  @media (max-width: 480px) {
+    .footere {
+      padding-top: 48px;
+    }
+  
+    .headinge {
+      font-size: 12px;
+    }
+  
+    .linke {
+      font-size: 13px;
+    }
+  
+    .paymente span {
+      font-size: 11.5px;
+      padding: 6px 10px;
+    }
   }
-
-  .headinge {
-    font-size: 12px;
+  
+  /* =========================
+     Very Small Devices (≤ 360px)
+     ========================= */
+  @media (max-width: 360px) {
+    .topAreace {
+      padding: 0 16px 32px;
+    }
+  
+    .bottomAreace {
+      padding: 18px 16px;
+    }
+  
+    .linke {
+      font-size: 12.5px;
+    }
+  
+    .copyrighte,
+    .countrye {
+      font-size: 12px;
+    }
   }
-
-  .linke {
-    font-size: 13px;
-  }
-
-  .bottomAreace {
-    padding: 20px 24px;
-  }
-}
+  

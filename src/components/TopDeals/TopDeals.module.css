@@ -97,3 +97,178 @@
     color: #878787;
   }
   
+
+  /* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+@media (max-width: 1200px) {
+  .dealsSectionc {
+    padding: 28px 32px;
+  }
+
+  .cardc {
+    min-width: 190px;
+  }
+}
+
+/* =========================
+   Tablets Landscape (≤ 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  .dealsSectionc {
+    padding: 26px 28px;
+  }
+
+  .titlec {
+    font-size: 20px;
+  }
+
+  .viewAllc {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+
+  .cardc {
+    min-width: 180px;
+    padding: 14px;
+  }
+
+  .cardc img {
+    height: 130px;
+  }
+}
+
+/* =========================
+   Tablets Portrait (≤ 900px)
+   ========================= */
+@media (max-width: 900px) {
+  .dealsSectionc {
+    padding: 24px 24px;
+  }
+
+  .dealsRowc {
+    gap: 14px;
+  }
+
+  .cardc {
+    min-width: 170px;
+  }
+
+  .pricec {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Large Phones / Small Tablets (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .dealsSectionc {
+    padding: 22px 20px;
+  }
+
+  .headerc {
+    margin-bottom: 16px;
+  }
+
+  .titlec {
+    font-size: 19px;
+  }
+
+  .cardc {
+    min-width: 160px;
+    padding: 13px;
+  }
+
+  .cardc img {
+    height: 120px;
+  }
+
+  .productNamec {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================
+   Standard iPhones (≤ 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .dealsSectionc {
+    padding: 20px 16px;
+  }
+
+  .headerc {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .viewAllc {
+    padding: 6px 12px;
+    font-size: 12.5px;
+  }
+
+  .dealsRowc {
+    gap: 12px;
+  }
+
+  .cardc {
+    min-width: 150px;
+    padding: 12px;
+  }
+
+  .discountTagc {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .pricec {
+    font-size: 14.5px;
+  }
+}
+
+/* =========================
+   Small iPhones (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .dealsSectionc {
+    padding: 18px 14px;
+  }
+
+  .titlec {
+    font-size: 18px;
+  }
+
+  .cardc {
+    min-width: 140px;
+  }
+
+  .cardc img {
+    height: 110px;
+  }
+
+  .subTextc {
+    font-size: 11.5px;
+  }
+}
+
+/* =========================
+   Very Small Devices (≤ 360px)
+   ========================= */
+@media (max-width: 360px) {
+  .dealsSectionc {
+    padding: 16px 12px;
+  }
+
+  .cardc {
+    min-width: 130px;
+    padding: 10px;
+  }
+
+  .productNamec {
+    font-size: 13px;
+  }
+
+  .pricec {
+    font-size: 14px;
+  }
+}

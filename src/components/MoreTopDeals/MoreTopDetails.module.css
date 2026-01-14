@@ -75,3 +75,157 @@
     margin-top: 2px;
   }
   
+
+
+  /* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+@media (max-width: 1200px) {
+  .wrapperd {
+    padding: 28px 32px;
+  }
+
+  .containerd {
+    gap: 14px;
+  }
+}
+
+/* =========================
+   Tablets Landscape (≤ 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  .wrapperd {
+    padding: 26px 28px;
+  }
+
+  .containerd {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sectionTitled {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   Tablets Portrait (≤ 900px)
+   ========================= */
+@media (max-width: 900px) {
+  .wrapperd {
+    padding: 24px 24px;
+  }
+
+  .gridd {
+    gap: 10px;
+  }
+
+  .cardd {
+    min-height: 160px;
+  }
+
+  .cardd img {
+    height: 100px;
+  }
+}
+
+/* =========================
+   Large Phones / Small Tablets (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .wrapperd {
+    padding: 22px 20px;
+  }
+
+  .containerd {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sectiond {
+    padding: 14px;
+  }
+
+  .sectionTitled {
+    font-size: 16px;
+  }
+
+  .arrowBtnd {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   Standard iPhones (≤ 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .wrapperd {
+    padding: 20px 16px;
+  }
+
+  .gridd {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cardd {
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .cardd img {
+    height: 120px;
+  }
+
+  .named {
+    font-size: 14px;
+  }
+
+  .offerd {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================
+   Small iPhones (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .wrapperd {
+    padding: 18px 14px;
+  }
+
+  .sectionHeaderd {
+    margin-bottom: 10px;
+  }
+
+  .sectionTitled {
+    font-size: 15px;
+  }
+
+  .cardd img {
+    height: 110px;
+  }
+}
+
+/* =========================
+   Very Small Devices (≤ 360px)
+   ========================= */
+@media (max-width: 360px) {
+  .wrapperd {
+    padding: 16px 12px;
+  }
+
+  .sectiond {
+    padding: 12px;
+  }
+
+  .named {
+    font-size: 13px;
+  }
+
+  .offerd {
+    font-size: 12px;
+  }
+}

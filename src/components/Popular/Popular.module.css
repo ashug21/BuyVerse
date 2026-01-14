@@ -108,3 +108,165 @@
     text-decoration: underline;
   }
   
+
+  /* =========================
+   Large Tablets & Small Laptops (≤ 1200px)
+   ========================= */
+@media (max-width: 1200px) {
+  .containerp {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .imageWrap {
+    height: 220px;
+  }
+}
+
+/* =========================
+   Tablets Landscape (≤ 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  .containerp {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .headingp {
+    font-size: 18px;
+  }
+
+  .pricep {
+    font-size: 20px;
+  }
+
+  .imageWrap {
+    height: 210px;
+  }
+}
+
+/* =========================
+   Tablets Portrait (≤ 900px)
+   ========================= */
+@media (max-width: 900px) {
+  .containerp {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .imageWrap {
+    height: 200px;
+  }
+
+  .thumbsp img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* =========================
+   Large Phones / Small Tablets (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .popularSectionp {
+    padding: 20px 0;
+  }
+
+  .containerp {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .headingp {
+    font-size: 17px;
+  }
+
+  .titlep {
+    font-size: 13.5px;
+  }
+
+  .imageWrap {
+    height: 190px;
+  }
+}
+
+/* =========================
+   Standard iPhones (≤ 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .containerp {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cardp {
+    padding: 14px;
+  }
+
+  .imageWrap {
+    height: 220px;
+  }
+
+  .pricep {
+    font-size: 21px;
+  }
+
+  .linkp {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================
+   Small iPhones (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .popularSectionp {
+    padding: 18px 0;
+  }
+
+  .cardp {
+    padding: 12px;
+  }
+
+  .headingp {
+    font-size: 16px;
+  }
+
+  .imageWrap {
+    height: 200px;
+  }
+
+  .thumbsp {
+    gap: 6px;
+  }
+
+  .thumbsp img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =========================
+   Very Small Devices (≤ 360px)
+   ========================= */
+@media (max-width: 360px) {
+  .cardp {
+    padding: 10px;
+  }
+
+  .imageWrap {
+    height: 180px;
+  }
+
+  .titlep {
+    font-size: 13px;
+  }
+
+  .pricep {
+    font-size: 19px;
+  }
+
+  .mrpp {
+    font-size: 12px;
+  }
+}
