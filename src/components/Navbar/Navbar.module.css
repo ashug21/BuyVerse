@@ -183,14 +183,22 @@
 }
 
 .sidebarLinka {
+  all: unset;
+  display: block;
   padding: 14px 20px;
-  font-size: 15px;
-  text-decoration: none;
+  font-size: 16px;
   color: #111;
+  cursor: pointer;
 }
 
 .sidebarLinka:hover {
   background: #f3f4f6;
+}
+.divingLine{
+  border: none;
+  height: 1px;
+  background-color: #e7e7e7;
+  margin: 24px 0;
 }
 
 .searchDropdowna {

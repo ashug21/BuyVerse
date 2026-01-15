@@ -213,15 +213,46 @@ const Navbar = () => {
                 <Link href="/" className={styles.sidebarLinka}>
                   Home
                 </Link>
+                <hr className={styles.divingLinea}/>
                 <Link href="/orders" className={styles.sidebarLinka}>
                   Orders
                 </Link>
+                <hr className={styles.divingLinea}/>
                 <Link href="/wishlist" className={styles.sidebarLinka}>
                   My Wishlist
                 </Link>
+                <hr className={styles.divingLinea}/>
                 <Link href="/cart" className={styles.sidebarLinka}>
-                  Cart
+                 My Cart
                 </Link>
+
+                <br/><br/>
+                <br/><br/>
+
+                <Link href="/electronics" className={styles.sidebarLinka}>
+                  Electronics Section
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/fashion" className={styles.sidebarLinka}>
+                  Fashion Section
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/skincare" className={styles.sidebarLinka}>
+                  Skincare Section
+                </Link>
+
+              <br/><br/><br/>
+              <br/><br/><br/>
+
+
+              <Link href="/signup" className={styles.sidebarLinka}>
+                  Signup
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/login" className={styles.sidebarLinka}>
+                  Login
+                </Link>
+
               </nav>
             </aside>
           </>
@@ -347,19 +378,48 @@ const Navbar = () => {
             </div>
 
             <nav className={styles.sidebarMenua}>
-              <Link href="/" className={styles.sidebarLinka}>
-                Home
-              </Link>
-              <Link href="/wishlist" className={styles.sidebarLinka}>
-                My Wishlist
-              </Link>
-              <Link href="/orders" className={styles.sidebarLinka}>
-               My Orders
-              </Link>
-              <Link href="/cart" className={styles.sidebarLinka}>
-                Cart Items
-              </Link>
-            </nav>
+                <Link href="/" className={styles.sidebarLinka}>
+                  Home
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/orders" className={styles.sidebarLinka}>
+                  Orders
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/wishlist" className={styles.sidebarLinka}>
+                  My Wishlist
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/cart" className={styles.sidebarLinka}>
+                 My Cart
+                </Link>
+
+                <br/><br/>
+                <br/><br/>
+
+                <Link href="/electronics" className={styles.sidebarLinka}>
+                  Electronics Section
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/fashion" className={styles.sidebarLinka}>
+                  Fashion Section
+                </Link>
+                <hr className={styles.divingLinea}/>
+                <Link href="/skincare" className={styles.sidebarLinka}>
+                  Skincare Section
+                </Link>
+
+              <br/><br/><br/>
+              <br/><br/><br/>
+              <br/><br/><br/>
+              <br/>
+ 
+
+                <button onClick={handleLogout} className={styles.sidebarLinka}>
+                  LogOut
+                </button>
+                <hr className={styles.divingLinea}/>
+              </nav>
           </aside>
         </>
       )}

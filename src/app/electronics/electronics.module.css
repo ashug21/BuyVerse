@@ -136,30 +136,158 @@
     border-color: #111827;
   }
   
-  /* MOBILE */
-  @media (max-width: 560px) {
-    .sortBarf {
-      padding: 0 20px;
+  @media (max-width: 1440px) {
+    .gridWrapperf {
+      padding: 32px 48px;
+      gap: 22px;
+    }
+    .imageWrapperf {
+      height: 210px;
     }
   }
   
+  @media (max-width: 1280px) {
+    .gridWrapperf {
+      padding: 28px 40px;
+      gap: 20px;
+    }
+    .imageWrapperf {
+      height: 200px;
+    }
+    .titlef {
+      font-size: 14.5px;
+    }
+    .pricef {
+      font-size: 18px;
+    }
+  }
   
-  /* OPTIONAL: RESPONSIVE FALLBACKS */
   @media (max-width: 1200px) {
     .gridWrapperf {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
+  @media (max-width: 1024px) {
+    .sortBarf {
+      padding: 0 40px;
+    }
+    .gridWrapperf {
+      padding: 26px 36px;
+      gap: 18px;
+    }
+    .imageWrapperf {
+      height: 190px;
+    }
+    .ctaf {
+      padding: 11px;
+      font-size: 13.5px;
+    }
+  }
+  
   @media (max-width: 900px) {
     .gridWrapperf {
       grid-template-columns: repeat(2, 1fr);
+      padding: 24px 32px;
+    }
+    .imageWrapperf {
+      height: 180px;
+    }
+    .titlef {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sortBarf {
+      justify-content: flex-start;
+      padding: 0 28px;
+    }
+    .gridWrapperf {
+      padding: 22px 28px;
+      gap: 16px;
+    }
+    .ratingRowf {
+      gap: 5px;
+    }
+    .priceRowf {
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .gridWrapperf {
+      grid-template-columns: 1fr;
+      padding: 20px 24px;
+    }
+    .imageWrapperf {
+      height: 200px;
+    }
+    .cardf {
+      padding: 16px;
     }
   }
   
   @media (max-width: 560px) {
+    .sortBarf {
+      padding: 0 20px;
+    }
     .gridWrapperf {
-      grid-template-columns: 1fr;
+      padding: 18px 20px;
+      gap: 14px;
+    }
+    .titlef {
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+    .pricef {
+      font-size: 17px;
+    }
+    .ctaf {
+      padding: 10px;
+      font-size: 13px;
     }
   }
+  
+  @media (max-width: 430px) {
+    .imageWrapperf {
+      height: 180px;
+    }
+    .ratingRowf {
+      flex-wrap: wrap;
+    }
+    .reviewCountf {
+      font-size: 11.5px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .gridWrapperf {
+      padding: 16px;
+    }
+    .imageWrapperf {
+      height: 165px;
+    }
+    .currencyf {
+      font-size: 12px;
+    }
+    .pricef {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .imageWrapperf {
+      height: 150px;
+    }
+    .titlef {
+      font-size: 13px;
+    }
+    .ctaf {
+      padding: 9px;
+    }
+  }
+  
+  
+ 
   

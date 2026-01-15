@@ -135,23 +135,156 @@
   .sortSelectg:focus {
     border-color: #111827;
   }
+ 
+  @media (max-width: 1440px) {
+    .gridWrapperg {
+      padding: 32px 48px;
+      gap: 22px;
+    }
+    .imageWrapperg {
+      height: 210px;
+    }
+  }
   
-  /* RESPONSIVE FALLBACKS */
+  @media (max-width: 1280px) {
+    .gridWrapperg {
+      padding: 28px 40px;
+      gap: 20px;
+    }
+    .imageWrapperg {
+      height: 200px;
+    }
+    .titleg {
+      font-size: 14.5px;
+    }
+    .priceg {
+      font-size: 18px;
+    }
+  }
+  
   @media (max-width: 1200px) {
     .gridWrapperg {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
+  @media (max-width: 1024px) {
+    .sortBarg {
+      padding: 0 40px;
+    }
+    .gridWrapperg {
+      padding: 26px 36px;
+      gap: 18px;
+    }
+    .imageWrapperg {
+      height: 190px;
+    }
+    .ctag {
+      padding: 11px;
+      font-size: 13.5px;
+    }
+  }
+  
   @media (max-width: 900px) {
     .gridWrapperg {
       grid-template-columns: repeat(2, 1fr);
+      padding: 24px 32px;
+    }
+    .imageWrapperg {
+      height: 180px;
+    }
+    .titleg {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sortBarg {
+      justify-content: flex-start;
+      padding: 0 28px;
+    }
+    .gridWrapperg {
+      padding: 22px 28px;
+      gap: 16px;
+    }
+    .ratingRowg {
+      gap: 5px;
+    }
+    .priceRowg {
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .gridWrapperg {
+      grid-template-columns: 1fr;
+      padding: 20px 24px;
+    }
+    .imageWrapperg {
+      height: 200px;
+    }
+    .cardg {
+      padding: 16px;
     }
   }
   
   @media (max-width: 560px) {
+    .sortBarg {
+      padding: 0 20px;
+    }
     .gridWrapperg {
-      grid-template-columns: 1fr;
+      padding: 18px 20px;
+      gap: 14px;
+    }
+    .titleg {
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+    .priceg {
+      font-size: 17px;
+    }
+    .ctag {
+      padding: 10px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .imageWrapperg {
+      height: 180px;
+    }
+    .ratingRowg {
+      flex-wrap: wrap;
+    }
+    .reviewCountg {
+      font-size: 11.5px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .gridWrapperg {
+      padding: 16px;
+    }
+    .imageWrapperg {
+      height: 165px;
+    }
+    .currencyg {
+      font-size: 12px;
+    }
+    .priceg {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .imageWrapperg {
+      height: 150px;
+    }
+    .titleg {
+      font-size: 13px;
+    }
+    .ctag {
+      padding: 9px;
     }
   }
   
