@@ -11,7 +11,10 @@ description : {
     type : String,
     required : true,
 },
-
+email : {
+  type : String,
+  required : true,
+},
 productId: {
     type: String,
     required: true,

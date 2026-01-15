@@ -29,7 +29,7 @@ export async function POST(req){
           }
           
 
-        const comment = await Comment.create({name : session.user.name , description , productId});
+        const comment = await Comment.create({name : session.user.name, email : session.user.email , description , productId});
 
         return NextResponse.json({success : true , message : "Comment added" , comment}, { status: 201 });
         

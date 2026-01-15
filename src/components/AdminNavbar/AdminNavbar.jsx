@@ -33,6 +33,7 @@ const AdminNavbar = () => {
             <nav className={styles.menua}>
 
             <Link href="/admin/dashboard" className={styles.menuItema}>Dashboard</Link>
+            <Link href="/admin/add-product" className={styles.menuItema}>Add Product Item</Link>
             </nav>
           </div>
 
