@@ -135,3 +135,171 @@
   }
   
   
+  @media (max-width: 1200px) {
+    .pagem {
+      padding: 36px 16px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .pagem {
+      padding: 32px 16px;
+    }
+  
+    .headingm {
+      font-size: 28px;
+    }
+  
+    .orderHeaderm {
+      grid-template-columns: repeat(2, 1fr) auto;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .orderHeaderm {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 12px;
+    }
+  
+    .statusm {
+      grid-column: span 2;
+      justify-self: flex-start;
+    }
+  
+    .orderBodym {
+      gap: 16px;
+    }
+  
+    .productImgm {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pagem {
+      padding: 28px 14px;
+    }
+  
+    .headingm {
+      font-size: 26px;
+    }
+  
+    .orderBodym {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .productImgm {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .detailsm {
+      width: 100%;
+    }
+  
+    .breakdownm {
+      font-size: 13px;
+    }
+  
+    .viewBtnm {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .headingm {
+      font-size: 24px;
+    }
+  
+    .orderHeaderm {
+      font-size: 13px;
+      padding: 14px;
+    }
+  
+    .labelm,
+    .orderIdm {
+      font-size: 11px;
+    }
+  
+    .statusm {
+      font-size: 11px;
+      padding: 5px 10px;
+    }
+  
+    .orderBodym {
+      padding: 16px;
+    }
+  
+    .titlem {
+      font-size: 15px;
+    }
+  
+    .addressBoxm {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pagem {
+      padding: 24px 12px;
+    }
+  
+    .headingm {
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+  
+    .ordersWrapm {
+      gap: 20px;
+    }
+  
+    .orderHeaderm {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .statusm {
+      width: fit-content;
+    }
+  
+    .productImgm {
+      width: 96px;
+      height: 96px;
+    }
+  
+    .breakdownm {
+      font-size: 12.5px;
+    }
+  
+    .viewBtnm {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .addressBoxm {
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .headingm {
+      font-size: 20px;
+    }
+  
+    .productImgm {
+      width: 88px;
+      height: 88px;
+    }
+  
+    .titlem {
+      font-size: 14px;
+    }
+  
+    .breakdownm {
+      font-size: 12px;
+    }
+  }
+  

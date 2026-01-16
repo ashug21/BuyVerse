@@ -173,3 +173,215 @@
     object-fit: contain;
   }
   
+
+
+  @media (max-width: 1440px) {
+    .loginContaineri {
+      width: 100%;
+      max-width: 1080px;
+    }
+  
+    .loginLefti,
+    .loginRighti {
+      padding: 64px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .loginContaineri {
+      max-width: 980px;
+    }
+  
+    .loginLefti,
+    .loginRighti {
+      padding: 56px;
+    }
+  
+    .loginTitlei {
+      font-size: 34px;
+    }
+  
+    .loginPromoi h2 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .loginPagei {
+      padding: 32px;
+    }
+  
+    .loginContaineri {
+      flex-direction: column;
+      max-width: 760px;
+    }
+  
+    .loginLefti {
+      padding: 56px 48px;
+    }
+  
+    .loginRighti {
+      min-height: 420px;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+  
+    .loginPromoi {
+      max-width: 520px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .loginContaineri {
+      max-width: 700px;
+    }
+  
+    .loginTitlei {
+      font-size: 32px;
+    }
+  
+    .loginSubtexti {
+      font-size: 15px;
+    }
+  
+    .loginPromoi h2 {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .loginPagei {
+      padding: 24px;
+    }
+  
+    .loginContaineri {
+      border-radius: 16px;
+    }
+  
+    .loginLefti {
+      padding: 48px 36px;
+    }
+  
+    .loginFormi {
+      margin-top: 36px;
+    }
+  
+    .inputi {
+      padding: 13px 14px;
+      font-size: 14px;
+    }
+  
+    .loginButtoni {
+      padding: 15px;
+      font-size: 15px;
+    }
+  
+    .loginRighti {
+      padding: 40px;
+    }
+  
+    .loginPromoi {
+      padding: 32px;
+    }
+  
+    .loginPromoi p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .loginPagei {
+      padding: 20px;
+    }
+  
+    .loginLefti {
+      padding: 40px 28px;
+    }
+  
+    .loginTitlei {
+      font-size: 28px;
+    }
+  
+    .loginSubtexti {
+      font-size: 14px;
+    }
+  
+    .loginPromoi h2 {
+      font-size: 24px;
+    }
+  
+    .loginPromoi {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .loginPagei {
+      padding: 16px;
+    }
+  
+    .loginContaineri {
+      border-radius: 14px;
+    }
+  
+    .loginLefti {
+      padding: 32px 22px;
+    }
+  
+    .loginTitlei {
+      font-size: 26px;
+    }
+  
+    .loginFormi {
+      margin-top: 32px;
+    }
+  
+    .inputGroupi {
+      margin-bottom: 20px;
+    }
+  
+    .labeli {
+      font-size: 13px;
+    }
+  
+    .inputi {
+      padding: 12px 14px;
+    }
+  
+    .loginButtoni {
+      padding: 14px;
+    }
+  
+    .signupTexti {
+      font-size: 13px;
+    }
+  
+    .loginRighti {
+      padding: 32px 24px;
+      min-height: 360px;
+    }
+  
+    .loginPromoi h2 {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .loginLefti {
+      padding: 28px 18px;
+    }
+  
+    .loginTitlei {
+      font-size: 24px;
+    }
+  
+    .loginPromoi {
+      padding: 26px;
+    }
+  
+    .loginPromoi h2 {
+      font-size: 20px;
+    }
+  }
+  

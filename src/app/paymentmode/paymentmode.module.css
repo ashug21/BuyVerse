@@ -198,4 +198,177 @@
     color: #067d62;
     font-weight: 600;
   }
+
+  
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .page {
+      padding: 32px 0;
+    }
+  
+    .layout {
+      grid-template-columns: 1.5fr 1fr;
+      gap: 20px;
+    }
+  
+    .title {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .summaryCard {
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page {
+      padding: 28px 0;
+    }
+  
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .card,
+    .summaryCard {
+      padding: 18px;
+    }
+  
+    .cardTitle {
+      font-size: 17px;
+    }
+  
+    .paymentOption {
+      font-size: 14px;
+      padding: 12px 0;
+    }
+  
+    .summaryRow,
+    .totalRow {
+      font-size: 14px;
+    }
+  
+    .totalRow {
+      font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .title {
+      font-size: 22px;
+    }
+  
+    .addressBox p {
+      font-size: 13px;
+    }
+  
+    .changeBtn {
+      font-size: 13px;
+    }
+  
+    .cardForm input {
+      padding: 9px;
+      font-size: 13px;
+    }
+  
+    .couponLabel {
+      font-size: 13px;
+    }
+  
+    .couponInput {
+      font-size: 13px;
+    }
+  
+    .couponBtn {
+      font-size: 13px;
+      padding: 0 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page {
+      padding: 24px 0;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .card,
+    .summaryCard {
+      padding: 16px;
+      border-radius: 8px;
+    }
+  
+    .cardTitle {
+      font-size: 16px;
+    }
+  
+    .cardRow {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .summaryRow,
+    .totalRow {
+      font-size: 13px;
+    }
+  
+    .totalRow {
+      font-size: 16px;
+    }
+  
+    .payBtn {
+      padding: 13px;
+      font-size: 15px;
+    }
+  
+    .couponBox {
+      padding: 12px;
+    }
+  
+    .couponInputWrap {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .couponBtn {
+      width: 100%;
+      height: 38px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .title {
+      font-size: 18px;
+    }
+  
+    .card,
+    .summaryCard {
+      padding: 14px;
+    }
+  
+    .paymentOption {
+      font-size: 13px;
+      gap: 10px;
+    }
+  
+    .payBtn {
+      font-size: 14px;
+    }
+  }
   

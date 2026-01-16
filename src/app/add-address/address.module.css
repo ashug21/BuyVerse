@@ -185,3 +185,131 @@
   justify-content: center;
   text-decoration: none;
 }
+
+
+
+@media (max-width: 1024px) {
+  .pagel {
+    padding: 24px 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .containerl {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagel {
+    padding: 20px 12px;
+  }
+
+  .containerl {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .headingl {
+    font-size: 19px;
+  }
+
+  .forml {
+    gap: 12px;
+  }
+
+  .inputl {
+    height: 40px;
+    font-size: 13.5px;
+  }
+
+  .submitl,
+  .useAddressBtn {
+    height: 42px;
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .headingl {
+    font-size: 18px;
+  }
+
+  .labell {
+    font-size: 12.5px;
+  }
+
+  .addressText {
+    font-size: 13px;
+  }
+
+  .addressText p {
+    font-size: 13px;
+  }
+
+  .binIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagel {
+    padding: 16px 10px;
+  }
+
+  .containerl {
+    padding: 16px;
+    border-radius: 6px;
+  }
+
+  .headingl {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .rowl {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputl {
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .submitl,
+  .useAddressBtn {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .addressCard {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .containerl {
+    padding: 14px;
+  }
+
+  .headingl {
+    font-size: 16px;
+  }
+
+  .submitl,
+  .useAddressBtn {
+    font-size: 13.5px;
+  }
+
+  .addressText {
+    font-size: 12.5px;
+  }
+
+  .binIcon {
+    width: 15px;
+    height: 15px;
+  }
+}

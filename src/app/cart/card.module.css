@@ -109,3 +109,140 @@
 .payBtnk:hover {
   background: #dda619;
 }
+
+
+
+@media (max-width: 1024px) {
+  .contentk {
+    padding: 28px 18px 0;
+  }
+
+  .cardk {
+    padding: 16px 18px;
+  }
+
+  .imgk {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 900px) {
+  .payBtnk {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentk {
+    padding: 24px 16px 0;
+  }
+
+  .cardk {
+    gap: 14px;
+  }
+
+  .imgk {
+    width: 78px;
+    height: 78px;
+  }
+
+  .titlek {
+    font-size: 14.5px;
+  }
+
+  .pricek {
+    font-size: 13.5px;
+  }
+
+  .btnk {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .payBtnk {
+    height: 50px;
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardk {
+    padding: 14px 16px;
+  }
+
+  .imgk {
+    width: 72px;
+    height: 72px;
+  }
+
+  .qtyk {
+    gap: 8px;
+  }
+
+  .bink {
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentk {
+    padding: 20px 14px 0;
+  }
+
+  .cardk {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .imgk {
+    width: 66px;
+    height: 66px;
+  }
+
+  .titlek {
+    font-size: 14px;
+  }
+
+  .pricek {
+    font-size: 13px;
+  }
+
+  .btnk {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .countk {
+    font-size: 13px;
+  }
+
+  .payWrapk {
+    margin-bottom: 64px;
+  }
+
+  .payBtnk {
+    width: 94%;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .imgk {
+    width: 60px;
+    height: 60px;
+  }
+
+  .titlek {
+    font-size: 13.5px;
+  }
+
+  .payBtnk {
+    font-size: 14px;
+    height: 46px;
+  }
+}

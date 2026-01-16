@@ -8,6 +8,7 @@ import PopularSection from "@/components/Popular/Popular";
 import TopDeals from "@/components/TopDeals/TopDeals";
 import React, { useEffect } from "react";
 import styles from "./page.module.css";
+import Snow from '../components/Snow';
 
 const Home = () => {
   useEffect(() => {
@@ -33,6 +34,8 @@ const Home = () => {
           on your order
         </span>
       </div>
+
+      <Snow />
       <br /> <br />
       <Banner />
       <br />
@@ -42,14 +45,8 @@ const Home = () => {
       <MultiDeals />
       <br /> <br /> <br />
       <PopularSection />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
    
 
       <Footer />

@@ -152,3 +152,224 @@
     background: #22c55e;
   }
   
+  @media (max-width: 1440px) {
+    .signupContainerh {
+      width: 100%;
+      max-width: 1080px;
+    }
+  
+    .signupLefth {
+      padding: 64px;
+    }
+  
+    .signupRighth {
+      padding: 64px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .signupContainerh {
+      max-width: 980px;
+    }
+  
+    .signupLefth {
+      padding: 56px;
+    }
+  
+    .signupRighth {
+      padding: 56px;
+    }
+  
+    .signupTitleh {
+      font-size: 34px;
+    }
+  
+    .promoTitleh {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .signupPageh {
+      padding: 32px;
+    }
+  
+    .signupContainerh {
+      flex-direction: column;
+      max-width: 760px;
+    }
+  
+    .signupLefth {
+      padding: 56px 48px;
+    }
+  
+    .signupRighth {
+      min-height: 420px;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+  
+    .promoBoxh {
+      max-width: 520px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .signupContainerh {
+      max-width: 700px;
+    }
+  
+    .signupTitleh {
+      font-size: 32px;
+    }
+  
+    .signupSubtexth {
+      font-size: 15px;
+    }
+  
+    .promoTitleh {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .signupPageh {
+      padding: 24px;
+    }
+  
+    .signupContainerh {
+      border-radius: 16px;
+    }
+  
+    .signupLefth {
+      padding: 48px 36px;
+    }
+  
+    .signupFormh {
+      margin-top: 36px;
+    }
+  
+    .inputh {
+      padding: 13px 14px;
+      font-size: 14px;
+    }
+  
+    .signupButtonh {
+      padding: 15px;
+      font-size: 15px;
+    }
+  
+    .signupRighth {
+      padding: 40px;
+    }
+  
+    .promoBoxh {
+      padding: 32px;
+    }
+  
+    .promoListh li {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .signupPageh {
+      padding: 20px;
+    }
+  
+    .signupLefth {
+      padding: 40px 28px;
+    }
+  
+    .signupTitleh {
+      font-size: 28px;
+    }
+  
+    .signupSubtexth {
+      font-size: 14px;
+    }
+  
+    .promoTitleh {
+      font-size: 24px;
+    }
+  
+    .promoBoxh {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .signupPageh {
+      padding: 16px;
+    }
+  
+    .signupContainerh {
+      border-radius: 14px;
+    }
+  
+    .signupLefth {
+      padding: 32px 22px;
+    }
+  
+    .signupTitleh {
+      font-size: 26px;
+    }
+  
+    .signupFormh {
+      margin-top: 32px;
+    }
+  
+    .inputGrouph {
+      margin-bottom: 20px;
+    }
+  
+    .labelh {
+      font-size: 13px;
+    }
+  
+    .inputh {
+      padding: 12px 14px;
+    }
+  
+    .signupButtonh {
+      padding: 14px;
+    }
+  
+    .loginTexth {
+      font-size: 13px;
+    }
+  
+    .signupRighth {
+      padding: 32px 24px;
+      min-height: 360px;
+    }
+  
+    .promoTitleh {
+      font-size: 22px;
+    }
+  
+    .promoListh li {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .signupLefth {
+      padding: 28px 18px;
+    }
+  
+    .signupTitleh {
+      font-size: 24px;
+    }
+  
+    .promoTitleh {
+      font-size: 20px;
+    }
+  
+    .promoBoxh {
+      padding: 26px;
+    }
+  }
+  
