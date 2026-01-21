@@ -51,22 +51,22 @@ const MultiDeals = () => {
 
             <Link href={"/skincare/34"} className={styles.cardd}>
               <img src="/skincare/PlumGreen/TeaOil/1.png" alt="teaoil" />
-              <p className={styles.named}>Men's Jackets</p>
+              <p className={styles.named}>Moisturizers</p>
               <span className={styles.offerd}>Min. 50% Off</span>
             </Link>
-            <Link href={"/skincare/41"} className={styles.cardd}>
-              <img src="/skincare/Simple/hydratingLight/1.png" alt="hydratingmoisturizer" />
-              <p className={styles.named}>Men's Caps</p>
+            <Link href={"/skincare/37"} className={styles.cardd}>
+              <img src="/skincare/LaRoche-Posay/Anthelios/1.png" alt="hydratingmoisturizer" />
+              <p className={styles.named}>Sunscreens</p>
               <span className={styles.offerd}>Top Picks</span>
             </Link>
             <Link href={"/fashion/22"} className={styles.cardd}>
               <img src="/banner/men2.png" alt="menhoodie" />
-              <p className={styles.named}>Men's Caps</p>
+              <p className={styles.named}>Men's Hoodies</p>
               <span className={styles.offerd}>Top Picks</span>
             </Link>
             <Link href={"/fashion/23"} className={styles.cardd}>
               <img src="/fashion/puma/WomensSolidCasualJacket/1.png" alt="womensolidjacket" />
-              <p className={styles.named}>Men's Caps</p>
+              <p className={styles.named}>Women's Jackets</p>
               <span className={styles.offerd}>Top Picks</span>
             </Link>
           </div>

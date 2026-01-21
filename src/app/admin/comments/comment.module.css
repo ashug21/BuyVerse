@@ -113,4 +113,122 @@
     color: #64748b;
     white-space: nowrap;
   }
+
+
+  @media (max-width: 1200px) {
+    .wrapperq {
+      padding: 24px;
+    }
+  
+    .cardGridq {
+      gap: 18px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .wrapperq {
+      padding: 22px;
+    }
+  
+    .titleq {
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+  
+    .cardq {
+      padding: 16px 18px;
+    }
+  
+    .contentq {
+      font-size: 12.5px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .cardGridq {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .dateBottomq {
+      bottom: 12px;
+      right: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wrapperq {
+      padding: 20px 16px;
+    }
+  
+    .titleq {
+      font-size: 22px;
+    }
+  
+    .headerq {
+      gap: 10px;
+    }
+  
+    .nameq {
+      font-size: 14px;
+    }
+  
+    .emailq {
+      font-size: 11px;
+    }
+  
+    .contentq {
+      -webkit-line-clamp: 5;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .wrapperq {
+      padding: 18px 14px;
+    }
+  
+    .cardq {
+      padding: 14px 16px;
+    }
+  
+    .binq {
+      width: 26px;
+      height: 26px;
+    }
+  
+    .dateq {
+      font-size: 10.5px;
+    }
+  
+    .dateBottomq {
+      font-size: 10.5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wrapperq {
+      padding: 16px 12px;
+    }
+  
+    .titleq {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .nameq {
+      font-size: 13px;
+    }
+  
+    .contentq {
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+  
+    .emptyq {
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  }
+  
   

@@ -87,3 +87,144 @@
     color: #9ca3af;
   }
   
+
+  @media (max-width: 1400px) {
+    .containery {
+      padding: 36px 28px;
+    }
+  
+    .rowy {
+      grid-template-columns:
+        2.2fr
+        3fr
+        1.4fr
+        1.2fr
+        1.6fr
+        1.2fr
+        1.1fr
+        2.2fr;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .containery {
+      padding: 32px 24px;
+    }
+  
+    .titley {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .rowy {
+      grid-template-columns:
+        2fr
+        2.6fr
+        1.3fr
+        1.2fr
+        1.5fr
+        1.2fr
+        1fr
+        2fr;
+      padding: 16px 18px;
+      font-size: 13.5px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .containery {
+      padding: 28px 20px;
+    }
+  
+    .tabley {
+      padding: 10px;
+    }
+  
+    .rowy {
+      grid-template-columns:
+        2fr
+        2.2fr
+        1.2fr
+        1.2fr
+        1.4fr
+        1.2fr;
+      row-gap: 6px;
+    }
+  
+    .rowy > *:nth-child(7),
+    .rowy > *:nth-child(8) {
+      display: none;
+    }
+  
+    .headery {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .containery {
+      padding: 24px 16px;
+    }
+  
+    .titley {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  
+    .headery {
+      display: none;
+    }
+  
+    .rowy {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 14px;
+      padding: 14px 16px;
+      font-size: 13px;
+    }
+  
+    .statusy {
+      font-size: 11px;
+      padding: 5px 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .containery {
+      padding: 20px 14px;
+    }
+  
+    .rowy {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 14px;
+    }
+  
+    .idy {
+      font-size: 11px;
+    }
+  
+    .statusy {
+      font-size: 11px;
+      padding: 5px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .containery {
+      padding: 18px 12px;
+    }
+  
+    .titley {
+      font-size: 22px;
+    }
+  
+    .rowy {
+      padding: 12px;
+    }
+  
+    .emptyy {
+      padding: 32px 16px;
+      font-size: 14px;
+    }
+  }
+  

@@ -108,3 +108,188 @@
     color: #facc15;
   }
   
+
+  /* =========================
+   Small Laptops & Narrow Screens
+   (≤ 1280px)
+   ========================= */
+@media (max-width: 1280px) {
+  .dashboardContentw {
+    padding: 28px;
+  }
+
+  .titlew {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .totalEarningsBoxw {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================
+   Tablets Landscape
+   (≤ 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  .dashboardContentw {
+    padding: 24px;
+  }
+
+  .titlew {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .sectionw {
+    padding: 22px;
+  }
+
+  .paymentGridw {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .totalEarningsBoxw {
+    max-width: 380px;
+    padding: 26px;
+  }
+
+  .totalValuew {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   Tablets Portrait
+   (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .dashboardContentw {
+    padding: 20px;
+  }
+
+  .titlew {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .sectionw {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .sectionTitlew {
+    font-size: 18px;
+  }
+
+  .paymentGridw {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .paymentCardw {
+    padding: 18px;
+  }
+
+  .totalEarningsBoxw {
+    margin-top: 32px;
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .totalLabelw {
+    font-size: 13px;
+  }
+
+  .totalValuew {
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   Large Phones
+   (≤ 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .dashboardContentw {
+    padding: 16px;
+  }
+
+  .titlew {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .sectionw {
+    padding: 18px;
+  }
+
+  .paymentGridw {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .paymentCardw {
+    padding: 16px;
+  }
+
+  .labelw {
+    font-size: 11px;
+  }
+
+  .valuew {
+    font-size: 13px;
+  }
+
+  .statusw {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .totalEarningsBoxw {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .totalValuew {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   Small Phones (iPhone SE / Mini)
+   (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .dashboardContentw {
+    padding: 14px;
+  }
+
+  .titlew {
+    font-size: 20px;
+  }
+
+  .sectionTitlew {
+    font-size: 17px;
+  }
+
+  .paymentCardw {
+    padding: 14px;
+  }
+
+  .totalEarningsBoxw {
+    padding: 20px;
+    gap: 8px;
+  }
+
+  .totalLabelw {
+    font-size: 12px;
+  }
+
+  .totalValuew {
+    font-size: 24px;
+  }
+}

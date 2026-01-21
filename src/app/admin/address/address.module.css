@@ -77,3 +77,143 @@
     color: #9ca3af;
   }
   
+
+  @media (max-width: 1500px) {
+    .containerx {
+      padding: 36px 28px;
+    }
+  
+    .rowx {
+      grid-template-columns:
+        2.5fr
+        2.3fr
+        1.3fr
+        3.5fr
+        3.5fr
+        1.4fr
+        1.3fr
+        1.3fr
+        2.5fr;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .containerx {
+      padding: 32px 24px;
+    }
+  
+    .titlex {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .rowx {
+      grid-template-columns:
+        2.2fr
+        2fr
+        1.2fr
+        3fr
+        3fr
+        1.3fr
+        1.2fr
+        1.2fr;
+      padding: 16px 18px;
+      font-size: 13.5px;
+    }
+  
+    .rowx > *:nth-child(9) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .containerx {
+      padding: 28px 20px;
+    }
+  
+    .tablex {
+      padding: 12px;
+    }
+  
+    .rowx {
+      grid-template-columns:
+        2fr
+        1.8fr
+        1.2fr
+        2.6fr
+        2.6fr
+        1.2fr;
+      row-gap: 6px;
+    }
+  
+    .rowx > *:nth-child(7),
+    .rowx > *:nth-child(8) {
+      display: none;
+    }
+  
+    .headerx {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .containerx {
+      padding: 24px 16px;
+    }
+  
+    .titlex {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  
+    .headerx {
+      display: none;
+    }
+  
+    .rowx {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 14px;
+      padding: 14px 16px;
+      font-size: 13px;
+    }
+  
+    .idx {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .containerx {
+      padding: 20px 14px;
+    }
+  
+    .rowx {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 14px;
+    }
+  
+    .idx {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .containerx {
+      padding: 18px 12px;
+    }
+  
+    .titlex {
+      font-size: 22px;
+    }
+  
+    .rowx {
+      padding: 12px;
+    }
+  
+    .emptyx {
+      padding: 32px 16px;
+      font-size: 14px;
+    }
+  }
+  
