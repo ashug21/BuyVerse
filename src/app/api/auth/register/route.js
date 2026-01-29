@@ -1,14 +1,27 @@
 import { connectDB } from "../../../../../lib/db";
+import redis from "../../../../../lib/redis";
 import User from "../../../../../models/User";
 
 export async function POST(req) {
   try {
-    const { name, email, password } = await req.json();
+    const body = await req.json();
+    const name = body.name?.trim();
+    const email = body.email?.trim().toLowerCase();
+    const password = body.password;
 
     if (!name || !email || !password) {
       return Response.json(
-        { error: "All fields are required" },
+        { error: "All fields required" },
         { status: 400 }
+      );
+    }
+
+    const verified = await redis.get(`verified:${email}`);
+
+    if (!verified) {
+      return Response.json(
+        { error: "Email not verified" },
+        { status: 403 }
       );
     }
 
@@ -25,11 +38,18 @@ export async function POST(req) {
     await User.create({
       name,
       email,
-      password,
+      password
     });
 
-    return Response.json({ success: true }, { status: 201 });
-  } catch {
+    await redis.del(`verified:${email}`);
+
+    return Response.json(
+      { success: true },
+      { status: 201 }
+    );
+
+  } catch (err) {
+    console.error("SIGNUP ERROR:", err);
     return Response.json(
       { error: "Internal server error" },
       { status: 500 }

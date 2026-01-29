@@ -3,7 +3,8 @@ import "./globals.css";
 import Providers from "../../providers";
 import ToasterClient from "../components/ToasterClient";
 import Script from "next/script";
-import Snow from '../components/Snow';
+import Snow from "../components/Snow";
+import ImageKitClientProvider from "../components/ImageKitClientProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
-        <Providers>
-          {children}
-          <ToasterClient />
-        
-        </Providers>
+        <ImageKitClientProvider>
+          <Providers>
+            {children}
+            <ToasterClient />
+          </Providers>
+        </ImageKitClientProvider>
+
       </body>
     </html>
   );
