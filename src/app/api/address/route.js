@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Address from "../../../../models/Address";
 import { connectDB } from "../../../../lib/db";
-
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 

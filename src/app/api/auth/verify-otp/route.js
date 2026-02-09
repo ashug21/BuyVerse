@@ -5,7 +5,7 @@ export async function POST(req) {
     const body = await req.json();
 
     const email = body.email?.trim().toLowerCase();
-    const otp = body.otp;
+    const otp = body.otp?.toString().trim();
 
     if (!email || !otp) {
       return Response.json(
@@ -23,7 +23,8 @@ export async function POST(req) {
       );
     }
 
-    if (savedOtp !== otp) {
+    // ✅ FIX: force string comparison
+    if (String(savedOtp) !== otp) {
       return Response.json(
         { error: "Invalid OTP" },
         { status: 400 }
@@ -31,7 +32,7 @@ export async function POST(req) {
     }
 
     await redis.del(`otp:${email}`);
-    await redis.set(`verified:${email}`, "true", { EX: 900 });
+    await redis.set(`verified:${email}`, "true", { ex: 900 });
 
     return Response.json({ success: true });
 

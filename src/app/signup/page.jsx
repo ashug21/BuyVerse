@@ -50,27 +50,30 @@ const Signup = () => {
 
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
-
+  
     if (!otp) {
       toast.error("OTP is required");
       return;
     }
-
+  
     const loadingToast = toast.loading("Verifying OTP...");
-
+  
     try {
       const res = await fetch("/api/auth/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, otp }),
+        body: JSON.stringify({
+          email: email.trim().toLowerCase(),
+          otp: otp.toString().trim(),
+        }),
       });
-
+  
       const data = await res.json();
-
+  
       if (!res.ok) {
         throw new Error(data.error || "OTP verification failed");
       }
-
+  
       toast.success("Email verified");
       setStep(3);
     } catch (err) {
@@ -79,6 +82,7 @@ const Signup = () => {
       toast.dismiss(loadingToast);
     }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

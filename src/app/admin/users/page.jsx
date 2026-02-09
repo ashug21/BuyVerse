@@ -7,6 +7,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 
 const Users = () => {
+  
   const [users, setUsers] = useState([]);
 
   const [name , setName] = useState("");
@@ -86,9 +87,6 @@ const Users = () => {
     } catch (error) {
       toast.error(error.message);
     } 
-
-   
-
   }
 
   return (

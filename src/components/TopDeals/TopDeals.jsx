@@ -51,6 +51,14 @@ const TopDeals = () => {
           <p className={styles.pricec}>₹41,999</p>
           <p className={styles.subTextc}>Smart Wearables</p>
         </Link>
+
+        <Link href="/electronics/12" className={styles.cardc}>
+          <span className={styles.discountTagc}>Most Popular</span>
+          <img src="/electronics/Playstation/ps5digitaledition/1.png" alt="Apple Watch" />
+          <p className={styles.productNamec}>PlayStation 5 Digital Edition</p>
+          <p className={styles.pricec}>₹39,990</p>
+          <p className={styles.subTextc}>Gaming Consoles</p>
+        </Link>
       </div>
     </section>
   );

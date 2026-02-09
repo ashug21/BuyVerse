@@ -7,7 +7,10 @@ function generateOTP() {
 
 export async function POST(req) {
   try {
-    const { email } = await req.json();
+    const body = await req.json();
+    const email = body.email?.trim().toLowerCase();
+
+    console.log("GENERATE OTP FOR:", email);
 
     if (!email) {
       return Response.json(
@@ -18,21 +21,11 @@ export async function POST(req) {
 
     const otp = generateOTP();
 
-    await redis.set(
-      `otp:${email}`,
-      otp,
-      { EX: 600 }
-    );
+    await redis.set(`otp:${email}`, otp, { ex: 600 });
 
-    try {
-      await sendOtpEmail(email, otp);
-    } catch (err) {
-      console.error("EMAIL ERROR:", err);
-      return Response.json(
-        { error: "Failed to send OTP email" },
-        { status: 500 }
-      );
-    }
+    console.log("OTP STORED:", otp);
+
+    await sendOtpEmail(email, otp);
 
     return Response.json({
       success: true,
@@ -40,7 +33,7 @@ export async function POST(req) {
     });
 
   } catch (err) {
-    console.error("API ERROR:", err);
+    console.error("GENERATE OTP ERROR:", err);
     return Response.json(
       { error: "Internal server error" },
       { status: 500 }
