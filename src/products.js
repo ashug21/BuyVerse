@@ -7,9 +7,9 @@ export const products = [
     ratings: 18432,
     starRating: 4,
     images: [
-      "/electronics/phones/iphone15pro/1.png",
-      "/electronics/phones/iphone15pro/2.png",
-      "/electronics/phones/iphone15pro/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/iphone15pro/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/iphone15pro/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/iphone15pro/3.png"
     ],
     category: "Electronics",
     description:
@@ -23,9 +23,9 @@ export const products = [
     ratings: 16287,
     starRating: 3,
     images: [
-      "/electronics/phones/samsung24ultra/1.png",
-      "/electronics/phones/samsung24ultra/2.png",
-      "/electronics/phones/samsung24ultra/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/samsung24ultra/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/samsung24ultra/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Phones/samsung24ultra/3.png"
     ],
     category: "Electronics",
     description:
@@ -39,9 +39,9 @@ export const products = [
     ratings: 9874,
     starRating: 5,
     images: [
-      "/electronics/laptop/Macbookairm2/1.png",
-      "/electronics/laptop/Macbookairm2/2.png",
-      "/electronics/laptop/Macbookairm2/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/Macbookairm2/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/Macbookairm2/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/Macbookairm2/3.png"
     ],
     category: "Electronics",
     description:
@@ -55,9 +55,9 @@ export const products = [
     ratings: 6421,
     starRating: 2,
     images: [
-      "/electronics/laptop/DellXPS 13 i7/1.png",
-      "/electronics/laptop/DellXPS 13 i7/2.png",
-      "/electronics/laptop/DellXPS 13 i7/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/DellXPS+13+i7/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/DellXPS+13+i7/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Laptop/DellXPS+13+i7/3.png"
     ],
     category: "Electronics",
     description:
@@ -71,14 +71,30 @@ export const products = [
     ratings: 11354,
     starRating: 4,
     images: [
-      "/electronics/ipad/ipadAir5thgen/1.png",
-      "/electronics/ipad/ipadAir5thgen/2.png",
-      "/electronics/ipad/ipadAir5thgen/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Ipad/ipadAir5thgen/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Ipad/ipadAir5thgen/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Ipad/ipadAir5thgen/3.png"
     ],
     category: "Electronics",
     description:
       "iPad Air 5th Generation is powered by the Apple M1 chip, delivering laptop-level performance in a sleek tablet form. Perfect for work, creativity, and entertainment, it supports Apple Pencil, Magic Keyboard, and offers a vibrant Liquid Retina display."
   },
+  // {
+  //   id: "6",
+  //   name: "Apple Watch Series 9",
+  //   beforePrice: 45900,
+  //   price: 41900,
+  //   ratings: 9218,
+  //   starRating: 5,
+  //   images: [
+  //     "/electronics/appleWatch/appleseries9/1.png",
+  //     "/electronics/appleWatch/appleseries9/2.png",
+  //     "/electronics/appleWatch/appleseries9/3.png"
+  //   ],
+  //   category: "Electronics",
+  //   description:
+  //     "Apple Watch Series 9 helps you stay connected, active, and healthy. It features advanced fitness tracking, health monitoring, a brighter display, fast performance, and seamless integration with iPhone, making it an essential everyday smart wearable."
+  // },
   {
     id: "6",
     name: "Apple Watch Series 9",
@@ -87,9 +103,9 @@ export const products = [
     ratings: 9218,
     starRating: 5,
     images: [
-      "/electronics/appleWatch/appleseries9/1.png",
-      "/electronics/appleWatch/appleseries9/2.png",
-      "/electronics/appleWatch/appleseries9/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/AppleWatch/AppleSeries/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/AppleWatch/AppleSeries/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/AppleWatch/AppleSeries/3.png"
     ],
     category: "Electronics",
     description:
@@ -103,9 +119,9 @@ export const products = [
     ratings: 13742,
     starRating: 5,
     images: [
-      "/electronics/headphones/SonyWH-1000XM5/1.png",
-      "/electronics/headphones/SonyWH-1000XM5/2.png",
-      "/electronics/headphones/SonyWH-1000XM5/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/SonyWH-1000XM5/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/SonyWH-1000XM5/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/SonyWH-1000XM5/3.png"
     ],
     category: "Electronics",
     description:
@@ -119,9 +135,9 @@ export const products = [
     ratings: 19876,
     starRating: 5,
     images: [
-      "/electronics/headphones/AppleAirpodsPro(2nd)/1.png",
-      "/electronics/headphones/AppleAirpodsPro(2nd)/2.png",
-      "/electronics/headphones/AppleAirpodsPro(2nd)/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/AppleAirpodsPro(2nd)/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/AppleAirpodsPro(2nd)/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Headphones/AppleAirpodsPro(2nd)/3.png"
     ],
     category: "Electronics",
     description:
@@ -135,9 +151,9 @@ export const products = [
     ratings: 22109,
     starRating: 4,
     images: [
-      "/electronics/jbl/charge5Bluetoothspeaker/1.png",
-      "/electronics/jbl/charge5Bluetoothspeaker/2.png",
-      "/electronics/jbl/charge5Bluetoothspeaker/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/JBL/charge5Bluetoothspeaker/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/JBL/charge5Bluetoothspeaker/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/JBL/charge5Bluetoothspeaker/3.png"
     ],
     category: "Electronics",
     description:
@@ -151,9 +167,9 @@ export const products = [
     ratings: 5432,
     starRating: 4,
     images: [
-      "/electronics/Camera/CanonE0SR50/1.png",
-      "/electronics/Camera/CanonE0SR50/2.png",
-      "/electronics/Camera/CanonE0SR50/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Camera/CanonE0SR50/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Camera/CanonE0SR50/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Camera/CanonE0SR50/3.png"
     ],
     category: "Electronics",
     description:
@@ -168,9 +184,9 @@ export const products = [
     ratings: 8743,
     starRating: 2,
     images: [
-      "/electronics/Gopro/Hero12BlackActionCamera/1.png",
-      "/electronics/Gopro/Hero12BlackActionCamera/2.png",
-      "/electronics/Gopro/Hero12BlackActionCamera/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/GoPro/Hero12BlackActionCamera/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/GoPro/Hero12BlackActionCamera/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/GoPro/Hero12BlackActionCamera/3.png"
     ],
     category: "Electronics",
     description:
@@ -184,9 +200,9 @@ export const products = [
     ratings: 30211,
     starRating: 5,
     images: [
-      "/electronics/Playstation/ps5digitaledition/1.png",
-      "/electronics/Playstation/ps5digitaledition/2.png",
-      "/electronics/Playstation/ps5digitaledition/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Playstation/ps5digitaledition/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Playstation/ps5digitaledition/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Playstation/ps5digitaledition/3.png"
     ],
     category: "Electronics",
     description:
@@ -200,9 +216,9 @@ export const products = [
     ratings: 15409,
     starRating: 1,
     images: [
-      "/electronics/Mouse/LogitechMXMaster/1.png",
-      "/electronics/Mouse/LogitechMXMaster/2.png",
-      "/electronics/Mouse/LogitechMXMaster/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Mouse/LogitechMXMaster/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Mouse/LogitechMXMaster/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Mouse/LogitechMXMaster/3.png"
     ],
     category: "Electronics",
     description:
@@ -216,9 +232,9 @@ export const products = [
     ratings: 6875,
     starRating: 3,
     images: [
-      "/electronics/Keyboard/KeychronK8Pro/1.png",
-      "/electronics/Keyboard/KeychronK8Pro/2.png",
-      "/electronics/Keyboard/KeychronK8Pro/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Keyboard/KeychronK8Pro/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Keyboard/KeychronK8Pro/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Keyboard/KeychronK8Pro/3.png"
     ],
     category: "Electronics",
     description:
@@ -232,9 +248,9 @@ export const products = [
     ratings: 9211,
     starRating: 4,
     images: [
-      "/electronics/Monitor/Samsung27inch4k/1.png",
-      "/electronics/Monitor/Samsung27inch4k/2.png",
-      "/electronics/Monitor/Samsung27inch4k/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Monitor/Samsung27inch4k/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Monitor/Samsung27inch4k/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Electronics/Monitor/Samsung27inch4k/3.png"
     ],
     category: "Electronics",
     description:
@@ -249,9 +265,9 @@ export const products = [
     ratings: 41235,
     starRating: 4,
     images: [
-      "/fashion/nike/menTshirt/1.png",
-      "/fashion/nike/menTshirt/2.png",
-      "/fashion/nike/menTshirt/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Nike/menTshirt/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Nike/menTshirt/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Nike/menTshirt/3.png"
     ],
     category: "Fashion",
     description:
@@ -265,9 +281,9 @@ export const products = [
     ratings: 28914,
     starRating: 4,
     images: [
-      "/fashion/puma/mens solidslimfit polo/1.png",
-      "/fashion/puma/mens solidslimfit polo/2.png",
-      "/fashion/puma/mens solidslimfit polo/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/mens+solidslimfit+polo/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/mens+solidslimfit+polo/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/mens+solidslimfit+polo/3.png"
     ],
     category: "Fashion",
     description:
@@ -282,8 +298,8 @@ export const products = [
     starRating: 5,
     images: [
       "/banner/women.png",
-      "/fashion/zara/floral print mini dress/2.png",
-      "/fashion/zara/floral print mini dress/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Zara/floral+print+mini+dress/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Zara/floral+print+mini+dress/3.png"
     ],
     category: "Fashion",
     description:
@@ -298,8 +314,8 @@ export const products = [
     starRating: 5,
     images: [
       "/banner/women2.png",
-      "/fashion/biba/womenKurta/2.png",
-      "/fashion/biba/womenKurta/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Biba/womenKurta/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Biba/womenKurta/3.png"
     ],
     category: "Fashion",
     description:
@@ -314,8 +330,8 @@ export const products = [
     starRating: 2,
     images: [
       "/banner/men1.png",
-      "/fashion/Levi's/511Men'sSlimFitJeans/2.png",
-      "/fashion/Levi's/511Men'sSlimFitJeans/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Levis/511Men'sSlimFitJeans/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Levis/511Men'sSlimFitJeans/3.png"
     ],
     category: "Fashion",
     description:
@@ -331,8 +347,8 @@ export const products = [
     starRating: 3,
     images: [
       "/banner/women3.png",
-      "/fashion/Only/Women'sHighRise/2.png",
-      "/fashion/Only/Women'sHighRise/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Only/Women'sHighRise/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Only/Women'sHighRise/3.png"
     ],
     category: "Fashion",
     description:
@@ -347,8 +363,8 @@ export const products = [
     starRating: 4,
     images: [
       "/banner/men2.png",
-      "/fashion/Adidas/MenFullSleeve/2.png",
-      "/fashion/Adidas/MenFullSleeve/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Adidas/MenFullSleeve/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Adidas/MenFullSleeve/3.png"
     ],
     category: "Fashion",
     description:
@@ -362,9 +378,9 @@ export const products = [
     ratings: 6841,
     starRating: 4,
     images: [
-      "/fashion/puma/WomensSolidCasualJacket/1.png",
-      "/fashion/puma/WomensSolidCasualJacket/2.png",
-      "/fashion/puma/WomensSolidCasualJacket/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/WomensSolidCasualJacket/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/WomensSolidCasualJacket/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Puma/WomensSolidCasualJacket/3.png"
     ],
     category: "Fashion",
     description:
@@ -379,8 +395,8 @@ export const products = [
     starRating: 4,
     images: [
       "/banner/shoes1.png",
-      "/fashion/nike/AirForce1Flyknit/2.png",
-      "/fashion/nike/AirForce1Flyknit/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Nike/AirForce1Flyknit/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Nike/AirForce1Flyknit/3.png"
     ],
     category: "Fashion",
     description:
@@ -394,9 +410,9 @@ export const products = [
     ratings: 19854,
     starRating: 5,
     images: [
-      "/fashion/Adidas/Ultraboost20running/1.png",
-      "/fashion/Adidas/Ultraboost20running/2.png",
-      "/fashion/Adidas/Ultraboost20running/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Adidas/Ultraboost20running/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Adidas/Ultraboost20running/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Adidas/Ultraboost20running/3.png"
     ],
     category: "Fashion",
     description:
@@ -411,9 +427,9 @@ export const products = [
     ratings: 9876,
     starRating: 4,
     images: [
-      "/fashion/Tommyhilfiger/MenCasualBrown/1.png",
-      "/fashion/Tommyhilfiger/MenCasualBrown/2.png",
-      "/fashion/Tommyhilfiger/MenCasualBrown/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Tommyhilfiger/MenCasualBrown/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Tommyhilfiger/MenCasualBrown/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Tommyhilfiger/MenCasualBrown/3.png"
     ],
     category: "Fashion",
     description:
@@ -428,8 +444,8 @@ export const products = [
     starRating: 5,
     images: [
       "/banner/women4.png",
-      "/fashion/Lavie/WomensBlueTote/2.png",
-      "/fashion/Lavie/WomensBlueTote/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Lavie/WomensBlueTote/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Lavie/WomensBlueTote/3.png"
     ],
     category: "Fashion",
     description:
@@ -444,8 +460,8 @@ export const products = [
     starRating: 5,
     images: [
       "/banner/glasses1.png",
-      "/fashion/Ray-ban/PolarizedAviator/2.png",
-      "/fashion/Ray-ban/PolarizedAviator/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/RayBan/PolarizedAviator/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/RayBan/PolarizedAviator/3.png"
     ],
     category: "Fashion",
     description:
@@ -459,9 +475,9 @@ export const products = [
     ratings: 22109,
     starRating: 4,
     images: [
-      "/fashion/Fastrack/StunnersBlackdial/1.png",
-      "/fashion/Fastrack/StunnersBlackdial/2.png",
-      "/fashion/Fastrack/StunnersBlackdial/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Fastrack/StunnersBlackdial/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Fastrack/StunnersBlackdial/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/Fastrack/StunnersBlackdial/3.png"
     ],
     category: "Fashion",
     description:
@@ -475,9 +491,9 @@ export const products = [
     ratings: 8643,
     starRating: 5,
     images: [
-      "/fashion/DanielWellington/womensClassicWatch/1.png",
-      "/fashion/DanielWellington/womensClassicWatch/2.png",
-      "/fashion/DanielWellington/womensClassicWatch/3.png"
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/DanielWellington/womensClassicWatch/1.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/DanielWellington/womensClassicWatch/2.png",
+      "https://buyverse56.s3.ap-south-1.amazonaws.com/Fashion/DanielWellington/womensClassicWatch/3.png"
     ],
     category: "Fashion",
     description:
