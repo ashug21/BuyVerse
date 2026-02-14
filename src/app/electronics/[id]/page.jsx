@@ -8,6 +8,9 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { encode } from "next-auth/jwt";
+import { getRelatedProducts } from "../../../../utils/getRelatedProducts";
+import Link from "next/link";
+
 
 const ProductPage = ({ params }) => {
   const { data: session, status } = useSession();
@@ -196,6 +199,15 @@ const ProductPage = ({ params }) => {
   };
   
 
+  const product1 = products.find(
+    (item) => item.id === id
+  );
+
+
+  const relatedProducts = getRelatedProducts(products, id);
+
+  
+
   return (
     <>
       <Navbar />
@@ -283,6 +295,38 @@ const ProductPage = ({ params }) => {
         </div>
         
       </div>
+
+
+<br/>
+<div className={styles.relatedSection}>
+  <h2 className={styles.relatedTitle}>Related Products</h2>
+
+  <div className={styles.relatedGrid}>
+    {relatedProducts.map((item) => (
+      <Link
+        key={item.id}
+        href={`/electronics/${item.id}`}
+        className={styles.relatedCard}
+      >
+        <div className={styles.relatedImageWrapper}>
+          <img
+            src={item.images?.[0]}
+            alt={item.name}
+            className={styles.relatedImage}
+          />
+        </div>
+
+        <h4 className={styles.relatedName}>{item.name}</h4>
+
+        <div className={styles.relatedPrice}>
+          ₹{item.price}
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
+
       
 
       <div className={styles.reviewSection}>
@@ -306,6 +350,8 @@ const ProductPage = ({ params }) => {
           </button>
         </form>
       </div>
+
+      
 
       {/* REVIEWS BELOW FORM */}
 
@@ -332,7 +378,6 @@ const ProductPage = ({ params }) => {
     </div>
   ))}
 </div>
-
 
 
       <Footer />

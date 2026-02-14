@@ -17,43 +17,37 @@ const addProduct = () => {
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-
+  
+    if (!file) return;
+  
     try {
-      if (!file) {
-        alert("Please select an image");
-        setLoading(false);
-        return;
-      }
-
-      console.log("Starting upload...");
-
-      const uploadRes = await upload({
-        file,
-        fileName: file.name,
-        folder: "/products",
-        useUniqueFileName: true,
-        
-        publicKey: process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY,
-        urlEndpoint: process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT,
-        authenticationEndpoint: "/api/imagekit-auth",
-        
-        onError: (error) => {
-          console.error("Upload error:", error);
+      setLoading(true);
+  
+      // 1️⃣ Get signed URL from backend
+      const res = await fetch("/api/upload");
+      const { url, fileName } = await res.json();
+  
+      // 2️⃣ Upload image directly to S3
+      await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": file.type,
         },
-        onSuccess: (result) => {
-          console.log("Upload success:", result);
-        }
+        body: file,
       });
-
-      console.log("Upload response:", uploadRes);
-      const imageUrl = uploadRes.url;
-
-      const res = await fetch("/api/admin/addProduct", {
+  
+      // 3️⃣ Construct public image URL
+      const imageUrl = `https://${process.env.NEXT_PUBLIC_BUCKET}.s3.${process.env.NEXT_PUBLIC_REGION}.amazonaws.com/${fileName}`;
+  
+      // 4️⃣ Send product data to your backend
+      await fetch("/api/admin/addProduct", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           title,
           stars,
@@ -62,18 +56,12 @@ const addProduct = () => {
           afterPrice,
           category,
           description,
-          file: imageUrl
+          image: imageUrl,
         }),
       });
+  
+      alert("Product added successfully");
 
-      const data = await res.json();
-      if (!res.ok) {
-        alert(data.message);
-        setLoading(false);
-        return;
-      }
-
-      // Reset form
       setTitle("");
       setStars("");
       setRating("");
@@ -81,22 +69,16 @@ const addProduct = () => {
       setAfterPrice("");
       setCategory("");
       setDescription("");
-      setFile(null);
-      
-      // Reset file input
-      const fileInput = document.querySelector('input[type="file"]');
-      if (fileInput) fileInput.value = '';
 
-      alert("Product added successfully");
-
+  
+      setLoading(false);
+  
     } catch (err) {
-      console.error("Error:", err);
-      alert(err?.message || "Upload failed");
-    } finally {
+      console.error(err);
       setLoading(false);
     }
   };
-
+   
 
   
 

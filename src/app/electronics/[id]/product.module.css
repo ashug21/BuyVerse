@@ -426,6 +426,116 @@
   outline: none;
 }
 
+/* ================= RELATED PRODUCTS ================= */
+
+.relatedSection {
+  max-width: 1400px;
+  margin: 100px auto 60px;
+  padding: 0 32px;
+}
+
+.relatedTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f1111;
+  margin-bottom: 28px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.relatedCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.relatedCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.relatedImageWrapper {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.relatedImage {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.relatedName {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.relatedPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: #b12704;
+}
+
+/* ================= RELATED RESPONSIVE ================= */
+
+@media (max-width: 1440px) {
+  .relatedSection {
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .relatedSection {
+    margin: 80px auto 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .relatedGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .relatedImageWrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .relatedGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .relatedImageWrapper {
+    height: 150px;
+  }
+
+  .relatedName {
+    font-size: 14px;
+  }
+
+  .relatedPrice {
+    font-size: 15px;
+  }
+}
+
 
 
 

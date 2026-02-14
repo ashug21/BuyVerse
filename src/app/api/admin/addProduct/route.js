@@ -6,17 +6,15 @@ export async function POST(req) {
     try {
         await connectDB();
 
-        const { title, stars, rating, beforePrice, afterPrice, category, description, file } = await req.json();
+        const { title, stars, rating, beforePrice, afterPrice, category, description, image } = await req.json();
 
-        // Enhanced validation
-        if (!title || !stars || !rating || !beforePrice || !afterPrice || !category || !description || !file) {
+        if (!title || !stars || !rating || !beforePrice || !afterPrice || !category || !description || !image) {
             return NextResponse.json(
                 { success: false, message: "All fields are required" }, 
                 { status: 400 }
             );
         }
 
-        // Validate data types
         if (isNaN(stars) || isNaN(rating) || isNaN(beforePrice) || isNaN(afterPrice)) {
             return NextResponse.json(
                 { success: false, message: "Stars, rating, and prices must be numbers" }, 
@@ -24,7 +22,6 @@ export async function POST(req) {
             );
         }
 
-        // Validate stars range
         if (parseInt(stars) < 1 || parseInt(stars) > 5) {
             return NextResponse.json(
                 { success: false, message: "Stars must be between 1 and 5" }, 
@@ -32,7 +29,6 @@ export async function POST(req) {
             );
         }
 
-        // Create image data with proper types
         const imageData = await Image.create({
             title,
             stars: parseInt(stars),
@@ -41,7 +37,7 @@ export async function POST(req) {
             afterPrice: parseFloat(afterPrice),
             category,
             description,
-            file
+            image
         });
 
         return NextResponse.json(

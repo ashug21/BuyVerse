@@ -9,6 +9,7 @@ import Link from "next/link";
 const Cart = () => {
   const [cart, setCart] = useState([]);
 
+  
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(storedCart);

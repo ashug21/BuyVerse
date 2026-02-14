@@ -7,6 +7,8 @@ import { products } from "@/products";
 import styles from "./electronics.module.css";
 import Footer from "@/components/Footer/Footer";
 
+
+
 const Electronics = () => {
   const initialProducts = products.filter(
     (product) => product.category === "Electronics"
@@ -38,6 +40,10 @@ const Electronics = () => {
       setElectronicsProducts(initialProducts);
     }
   };
+
+
+
+
 
   return (
     <div className={styles.pagef}>
